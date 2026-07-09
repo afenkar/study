@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第 2 周 Day 1：手写简易 Promise</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    button { margin: 0.25rem 0.25rem 0.25rem 0; padding: 0.4rem 0.8rem; cursor: pointer; }
+    pre { background: #f5f5f5; padding: 0.75rem; overflow-x: auto; border-radius: 4px; white-space: pre-wrap; }
+    .output { color: #0a7; font-weight: 600; min-height: 1.2em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>第 2 周 · Day 1：手写简易 Promise</h1>
+  <p class="hint">先完成 <code>miniPromise.js</code> 的 4 个 TODO，再点「运行验证」。</p>
+
+  <section>
+    <h2>实验 A：三种状态</h2>
+    <p class="hint">pending → resolve → fulfilled；then 回调拿到 value</p>
+    <button id="btn-a">运行实验 A</button>
+    <pre class="output" id="out-a"></pre>
+  </section>
+
+  <section>
+    <h2>实验 B：then 链式调用</h2>
+    <p class="hint">每个 then 返回新 Promise，所以能 .then().then()</p>
+    <button id="btn-b">运行实验 B</button>
+    <pre class="output" id="out-b"></pre>
+  </section>
+
+  <section>
+    <h2>实验 C：reject + catch</h2>
+    <button id="btn-c">运行实验 C</button>
+    <pre class="output" id="out-c"></pre>
+  </section>
+
+  <section>
+    <h2>练习 · 4 用例自动化验证</h2>
+    <button id="btn-check">运行验证</button>
+    <pre class="output" id="out-check"></pre>
+  </section>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

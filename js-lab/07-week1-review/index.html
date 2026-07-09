@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第 1 周复盘 · Day 7 自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select, input[type="text"] { width: 100%; max-width: 360px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>第 1 周复盘 · 闭卷自测（10 题）</h1>
+  <p class="hint">先心算或写纸笔，再选答案。完成后点「验证答案」，对照 <code>notes/week01-day07-review-and-optimize.md</code> 复盘。</p>
+
+  <section>
+    <div class="q">
+      <label>1. 闭包的本质是？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="a">函数 + 能访问的外层词法作用域变量</option>
+        <option value="b">函数内部的 this 绑定</option>
+        <option value="c">原型链上的继承关系</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. <code>for (var i = 0; i &lt; 3; i++) setTimeout(() =&gt; console.log(i), 0)</code> 输出？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="a">0, 1, 2</option>
+        <option value="b">3, 3, 3</option>
+        <option value="c">undefined × 3</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. let 在声明前访问会？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="a">得到 undefined</option>
+        <option value="b">ReferenceError（暂时性死区）</option>
+        <option value="c">得到 null</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. <code>const f = obj.method; f()</code> 中 this 通常指向？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="a">obj</option>
+        <option value="b">window / undefined（严格模式）</option>
+        <option value="c">method 函数本身</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. bind 和 call 的主要区别？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="a">bind 立刻执行，call 返回新函数</option>
+        <option value="b">call 立刻执行，bind 返回绑定了 this 的新函数</option>
+        <option value="c">没有区别</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. 实例 obj 读属性时，原型链查找顺序？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="a">obj 自身 → obj.__proto__ → … → null</option>
+        <option value="b">Constructor.prototype → obj → null</option>
+        <option value="c">只在 obj 自身找，找不到就 undefined</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. <code>new Foo()</code> 不包含哪一步？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="a">创建空对象并连上 Foo.prototype</option>
+        <option value="b">以新对象为 this 执行 Foo</option>
+        <option value="c">自动把 Foo 挂到 window 上</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. 下列属于微任务的是？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="a">setTimeout</option>
+        <option value="b">Promise.then</option>
+        <option value="c">script 整体</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. 经典题输出顺序：<code>console.log(1); setTimeout(()=&gt;console.log(2),0); Promise.resolve().then(()=&gt;console.log(3)); console.log(4);</code></label>
+      <input id="q9" type="text" placeholder="例：1,4,3,2" />
+    </div>
+
+    <div class="q">
+      <label>10. Todo 项目为什么把 todos 放在 createTodoStore 闭包里？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="a">为了用 this 绑定</option>
+        <option value="b">私有数据，外部只能通过 store 方法改，每次 create 独立状态</option>
+        <option value="c">因为 localStorage 要求闭包</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

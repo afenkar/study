@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第1课：作用域与闭包 - 实验台</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    button { margin: 0.25rem 0.5rem 0.25rem 0; padding: 0.4rem 0.8rem; cursor: pointer; }
+    pre { background: #f5f5f5; padding: 0.75rem; overflow-x: auto; border-radius: 4px; }
+    .output { color: #0a7; font-weight: 600; min-height: 1.2em; }
+    .hint { color: #666; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>第1课实验：作用域与闭包</h1>
+  <p class="hint">用浏览器打开此文件，按 F12 打开控制台，点击按钮观察结果。先自己预测输出，再验证。</p>
+
+  <section>
+    <h2>实验 A：var / let / const 与块级作用域</h2>
+    <button id="btn-a">运行实验 A</button>
+    <pre class="output" id="out-a"></pre>
+  </section>
+
+  <section>
+    <h2>实验 B：闭包 — 计数器</h2>
+    <button id="btn-inc">+1</button>
+    <button id="btn-dec">-1</button>
+    <pre class="output" id="out-b">当前值：0</pre>
+  </section>
+
+  <section>
+    <h2>实验 C：经典坑 — 循环里的 var</h2>
+    <button id="btn-c">运行实验 C（看控制台）</button>
+    <p class="hint">打开控制台查看 3 个按钮点击后的输出</p>
+    <div id="buttons-c"></div>
+  </section>
+
+  <section>
+    <h2>实验 D：你的练习 — 实现 createMultiplier</h2>
+    <p>在 <code>exercise.js</code> 里完成函数，完成后点击验证。</p>
+    <button id="btn-d">验证练习</button>
+    <pre class="output" id="out-d"></pre>
+  </section>
+
+  <script src="main.js"></script>
+  <script src="exercise.js"></script>
+</body>
+</html>
