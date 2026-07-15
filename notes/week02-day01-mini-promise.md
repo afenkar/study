@@ -4,11 +4,11 @@
 
 ## 今日目标
 
-- [ ] 说清 Promise 三种状态与状态流转规则
-- [ ] 理解 `then` 为什么返回新 Promise（链式调用）
-- [ ] 完成 `js-lab/08-mini-promise/miniPromise.js` 中 4 个 TODO
-- [ ] 通过 `exercise.js` 验证（4 个用例全绿）
-- [ ] 填写本笔记底部复盘
+- [x] 说清 Promise 三种状态与状态流转规则
+- [x] 理解 `then` 为什么返回新 Promise（链式调用）
+- [x] 完成 `js-lab/08-mini-promise/miniPromise.js` 中 4 个 TODO
+- [x] 通过 `exercise.js` 验证（4 个用例全绿）
+- [x] 填写本笔记底部复盘
 
 ## 实验位置
 
@@ -84,11 +84,12 @@ pending ──reject(reason)──▶ rejected
 
 ### Promise 三种状态（自己的话）
 
-（填写）
+pending（等待）→ resolve → fulfilled（成功，不可逆）  
+pending（等待）→ reject → rejected（失败，不可逆）
 
 ### then 为什么返回新 Promise？
 
-（填写）
+见下方「Day 8 复盘检查」讲解；一句话：**为了链式调用——上一个 then 的结果是下一个 then 的输入，且整个过程仍是异步的，所以必须再包一层 Promise。**
 
 ### 今天卡在哪？
 
@@ -100,9 +101,9 @@ pending ──reject(reason)──▶ rejected
 2. **then**：返回新 Promise；pending 时登记回调，settled 时用 queueMicrotask 异步执行
 3. **catch**：`then(null, onRejected)` 的语法糖
 
-## 复盘 · YYYY-MM-DD
+## 复盘 · 2026-07-10
 
-- 今天学了：
-- 搞懂的一个概念：
-- 还不清楚的：
-- 明天优先：Day 2 · 手写 bind + call/apply 复习
+- 今天学了：Promise 三种状态、constructor/then/catch 实现、语法糖
+- 搞懂的一个概念：then 返回新 Promise + callbacks 队列处理异步 resolve
+- 还不清楚的：then 返回值如何决定下一个 Promise 的状态（进阶，原生 Promise 会解析 thenable）
+- 明天优先：Day 9 · 手写 bind ✅ 已完成

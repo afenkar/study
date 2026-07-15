@@ -12,9 +12,9 @@
 
 ## 当前任务
 
-**第 2 周 · Day 1：手写简易 Promise**
+**第 3 周 · Day 13：防抖与节流**
 
-1. 阅读 `notes/week02-day01-mini-promise.md`
-2. Live Server 打开 `js-lab/08-mini-promise/index.html`
-3. 完成 `miniPromise.js` 里 4 个 TODO
-4. 点「运行验证」，4 个用例全绿即过关
+1. 阅读 `notes/week03-day13-debounce-throttle.md`
+2. Live Server 打开 `js-lab/13-debounce-throttle/index.html`
+3. 完成 `debounceThrottle.js` 里 2 个 TODO + `exercise.js` 概念题
+4. 点「运行验证」全绿即过关

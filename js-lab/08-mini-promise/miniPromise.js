@@ -28,7 +28,7 @@ export class MyPromise {
     // ④ reject：只能 pending → rejected
     const reject = (reason) =>{
       if(this.state !== 'pending')return;
-      this.state = 'reject'
+      this.state = 'rejected'
       this.reason = reason
       this.callbacks.forEach((cb)=>cb.onRejected(reason))
     }

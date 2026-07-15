@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 13：防抖与节流</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    button { margin: 0.25rem 0.25rem 0.25rem 0; padding: 0.4rem 0.8rem; cursor: pointer; }
+    pre { background: #f5f5f5; padding: 0.75rem; overflow-x: auto; border-radius: 4px; white-space: pre-wrap; }
+    .output { color: #0a7; font-weight: 600; min-height: 1.2em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+    input { padding: 0.4rem 0.6rem; width: min(100%, 280px); }
+  </style>
+</head>
+<body>
+  <h1>Day 13 · 防抖与节流</h1>
+  <p class="hint">须用 <strong>Live Server</strong> 打开。先完成 <code>debounceThrottle.js</code>，再点验证。</p>
+
+  <section>
+    <h2>实验 A：防抖（模拟搜索）</h2>
+    <p class="hint">快速输入，观察「请求」是否只在停手后触发一次。</p>
+    <input id="search" type="text" placeholder="输入关键词…" />
+    <pre class="output" id="out-a">等待输入…</pre>
+  </section>
+
+  <section>
+    <h2>实验 B：节流（模拟滚动）</h2>
+    <button id="btn-scroll">连续点我 10 次（模拟滚动）</button>
+    <pre class="output" id="out-b">尚未点击</pre>
+  </section>
+
+  <section>
+    <h2>实验 C：对照表</h2>
+    <button id="btn-c">运行实验 C</button>
+    <pre class="output" id="out-c"></pre>
+  </section>
+
+  <section>
+    <h2>练习 E · debounce / throttle + 概念题</h2>
+    <button id="btn-e">运行验证</button>
+    <pre class="output" id="out-e"></pre>
+  </section>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
