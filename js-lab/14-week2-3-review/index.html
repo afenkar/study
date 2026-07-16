@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第 2–3 周复盘 · Day 14 自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select, input[type="text"] { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>第 2–3 周复盘 · 闭卷自测（10 题）</h1>
+  <p class="hint">覆盖 Day 8–13。先心算，再选答案。对照 <code>notes/week03-day14-week2-3-review.md</code> 复盘。</p>
+
+  <section>
+    <div class="q">
+      <label>1. call 和 bind 的主要区别？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="a">bind 立刻执行，call 返回新函数</option>
+        <option value="b">call 立刻执行，bind 返回绑定了 this 的新函数</option>
+        <option value="c">没有区别</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. class 方法实际挂在哪里？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="a">每个实例自己一份</option>
+        <option value="b">构造函数的 prototype 上</option>
+        <option value="c">全局 window 上</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. 子类 constructor 里必须先调用？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="a">this</option>
+        <option value="b">super()</option>
+        <option value="c">return</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. <code>{ ...obj }</code> 属于？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="a">深拷贝</option>
+        <option value="b">浅拷贝</option>
+        <option value="c">赋值（同一引用）</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. 浅拷贝后改 <code>copy.nest.y</code>，原对象 <code>nest.y</code> 会变吗？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="a">不会，已经拷贝了</option>
+        <option value="b">会，嵌套仍是同一引用</option>
+        <option value="c">只有数组会变</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. <code>new</code> 的正确顺序是？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="a">调构造函数 → 建对象 → 连原型 → 返回</option>
+        <option value="b">建对象 → 连原型 → 当 this 调构造函数 → 决定返回谁</option>
+        <option value="c">连原型 → 返回 → 建对象 → 调构造函数</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. 构造函数 <code>return { a: 1 }</code> 时，<code>new</code> 得到？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="a">构造函数里的 this</option>
+        <option value="b">返回的对象 <code>{ a: 1 }</code></option>
+        <option value="c">undefined</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. 搜索框输入请求应该用？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="a">节流 throttle</option>
+        <option value="b">防抖 debounce</option>
+        <option value="c">深拷贝</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. 防抖的核心手段是？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="a">Date.now 比时间戳</option>
+        <option value="b">clearTimeout 后重新 setTimeout</option>
+        <option value="c">Object.create</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. <code>JSON.parse(JSON.stringify(obj))</code> 的局限不包括？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="a">会丢失 function / undefined</option>
+        <option value="b">Date 会变成字符串</option>
+        <option value="c">不能拷贝普通嵌套对象</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

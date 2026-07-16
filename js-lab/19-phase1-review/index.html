@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第 1 阶段总复盘 · Day 19</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select, input[type="text"] { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>第 1 阶段总复盘 · 闭卷自测（12 题）</h1>
+  <p class="hint">覆盖 Day 1–18 核心。对照 <code>notes/week05-day19-phase1-review.md</code> 口述 8 句。</p>
+
+  <section>
+    <div class="q">
+      <label>1. 闭包的本质是？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="a">函数 + 能访问的外层词法作用域变量</option>
+        <option value="b">函数内部的 this 绑定</option>
+        <option value="c">原型链上的继承</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. for (var i=0; i&lt;3; i++) setTimeout(()=&gt;console.log(i),0) 输出？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="a">0, 1, 2</option>
+        <option value="b">3, 3, 3</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. const f = obj.method; f() 中 this 通常指向？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="a">obj</option>
+        <option value="b">window / undefined（严格模式）</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. bind 和 call 的主要区别？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="a">bind 立刻执行，call 返回新函数</option>
+        <option value="b">call 立刻执行，bind 返回绑定了 this 的新函数</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. class 方法实际挂在？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="a">每个实例</option>
+        <option value="b">构造函数的 prototype</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. { ...obj } 改 nest.y，原对象 nest.y 会变吗？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="a">不会</option>
+        <option value="b">会，嵌套仍共享</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. 子类 constructor 必须先？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="a">super()</option>
+        <option value="b">this.x = 1</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. 搜索框输入请求用？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="a">debounce</option>
+        <option value="b">throttle</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. Promise.all 与 race：全到齐 vs 谁先到？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="a">all=谁先到，race=全到齐</option>
+        <option value="b">all=全到齐，race=谁先到</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. for + await 是？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="a">串行</option>
+        <option value="b">并行</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>11. 经典题 1; setTimeout→2; Promise.then→3; 4 顺序？</label>
+      <input id="q11" type="text" placeholder="1,4,3,2" />
+    </div>
+
+    <div class="q">
+      <label>12. async1/async2 经典题顺序？</label>
+      <input id="q12" type="text" placeholder="4,1,3,5,2" />
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

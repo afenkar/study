@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第 4 周复盘 · Day 18 自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select, input[type="text"] { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>第 4 周复盘 · 闭卷自测（10 题）</h1>
+  <p class="hint">覆盖 Day 8 + 15–17。对照 <code>notes/week04-day18-week4-review.md</code> 复盘。</p>
+
+  <section>
+    <div class="q">
+      <label>1. Promise.then 属于？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="macro">宏任务</option>
+        <option value="micro">微任务</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. Promise.all 要等全部成功才 resolve？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="yes">yes</option>
+        <option value="no">no</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. Promise.race 取的是？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="all">全部 settled</option>
+        <option value="first">最先 settled 的一个</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. 3 个互不依赖的接口要快 → 用？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="serial">串行 for + await</option>
+        <option value="parallel">并行 Promise.all</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. setTimeout 能直接 await 等待吗？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="yes">yes</option>
+        <option value="no">no，要包成 Promise</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. myAll 里 reject 应放在 .then 的？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="first">第 1 个参数</option>
+        <option value="second">第 2 个参数</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. async function 的返回值本质是？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="promise">Promise</option>
+        <option value="plain">普通值，不会是 Promise</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. 经典题：<code>1; setTimeout→2; Promise.then→3; 4</code> 顺序？</label>
+      <input id="q8" type="text" placeholder="1,4,3,2" />
+    </div>
+
+    <div class="q">
+      <label>9. async1/async2 经典题顺序？</label>
+      <input id="q9" type="text" placeholder="4,1,3,5,2" />
+    </div>
+
+    <div class="q">
+      <label>10. await 后面的代码相当于？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="macro">宏任务</option>
+        <option value="micro">微任务（类似 .then）</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>
