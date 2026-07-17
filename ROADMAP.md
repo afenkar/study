@@ -196,7 +196,7 @@ Study/
 | 阶段 | 状态 | 备注 |
 |------|------|------|
 | 第 1 阶段 · JS 地基 | ✅ 已完成 | Day 19 总复盘 12/12 |
-| 第 2 阶段 · Vue 深度 | 🟡 进行中 | Day 20：ref / reactive |
+| 第 2 阶段 · Vue 深度 | 🟡 进行中 | Day 24：slot 插槽 |
 | 第 3 阶段 · 工程化 | ⚪ 未开始 | 预计第 11 周 |
 | 第 4 阶段 · 求职冲刺 | ⚪ 未开始 | 预计第 15 周 |
 
@@ -217,7 +217,11 @@ Study/
 - [x] 事件循环进阶输出题（Day 17）
 - [x] 第 4 周复盘自测（Day 18）
 - [x] 第 1 阶段总复盘（Day 19）
-- [ ] Vue 3 ref / reactive（Day 20）
+- [x] Vue 3 ref / reactive（Day 20）
+- [x] Vue 3 computed / watch（Day 21）
+- [x] 第 5 周响应式复盘（Day 22）
+- [x] Vue 3 props / emit（Day 23）
+- [ ] Vue 3 slot 插槽（Day 24）
 - [ ] Vue 3 官方文档精读第一遍
 - [ ] 完成 `vue-admin` 求职代表作
 - [ ] 过 50 道面试题

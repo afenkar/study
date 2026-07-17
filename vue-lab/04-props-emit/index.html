@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 23：props 与 emit</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    button { margin: 0.25rem 0.25rem 0.25rem 0; padding: 0.4rem 0.8rem; cursor: pointer; }
+    pre { background: #f5f5f5; padding: 0.75rem; overflow-x: auto; border-radius: 4px; white-space: pre-wrap; }
+    .output { color: #0a7; font-weight: 600; min-height: 1.2em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+    #app-a { margin-top: 1rem; padding: 1rem; background: #fafafa; border-radius: 8px; }
+    .display { font-size: 1.1rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>Day 23 · Vue 3 props 与 emit</h1>
+  <p class="hint">须用 <strong>Live Server</strong> 打开。先完成 <code>components.js</code> 两个 TODO，再点验证。</p>
+
+  <section>
+    <h2>实验 A：ScoreBoard 父子通信</h2>
+    <p class="hint">父组件 ScoreBoard 传 <code>:count</code> 给 CounterDisplay，监听 CounterPanel 的 <code>@add</code>。</p>
+    <div id="app-a"></div>
+  </section>
+
+  <section>
+    <h2>练习 E · components.js + 概念题</h2>
+    <button id="btn-e">运行验证</button>
+    <pre class="output" id="out-e"></pre>
+  </section>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

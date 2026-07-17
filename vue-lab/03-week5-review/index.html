@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第 5 周复盘 · Day 22 自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>第 5 周复盘 · 闭卷自测（10 题）</h1>
+  <p class="hint">覆盖 Day 20–21 响应式四件套。对照 <code>notes/week05-day22-week5-review.md</code> 复盘。</p>
+
+  <section>
+    <div class="q">
+      <label>1. 计数器 <code>count = 0</code> 应用？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="ref">ref</option>
+        <option value="reactive">reactive</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. 表单对象 <code>{ name, email }</code> 应用？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="ref">ref</option>
+        <option value="reactive">reactive</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. script 里读 ref，要？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="value">.value</option>
+        <option value="dot">直接 .prop</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. template 里 <code>{{ count }}</code> 要 .value 吗？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="yes">要</option>
+        <option value="no">不要，自动解包</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. <code>reactive</code> 对象能 <code>user = {}</code> 整体替换吗？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="yes">可以</option>
+        <option value="no">不行，会丢响应式</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. 总价 = 单价 × 数量，用？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="computed">computed</option>
+        <option value="watch">watch</option>
+        <option value="method">method</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. computed 依赖不变时会？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="cache">缓存，不重算</option>
+        <option value="recalc">每次访问都重算</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. 库存 &lt; 10 推告警，用？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="computed">computed</option>
+        <option value="watch">watch</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. <code>total = ref(); total.value = computed(...)</code> 对吗？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="yes">对</option>
+        <option value="no">错，total 应直接 computed(...)</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. watch 默认挂载时立刻执行 callback？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="yes">是</option>
+        <option value="no">否，除非 immediate: true</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

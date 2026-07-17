@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 24：插槽 slot</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    button { padding: 0.4rem 0.8rem; cursor: pointer; }
+    pre.output { color: #0a7; font-weight: 600; min-height: 1.2em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+    #app-a { margin-top: 1rem; }
+    .card { border: 1px solid #ccc; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+    .card-title { margin: 0 0 0.5rem; font-size: 1rem; }
+    .header { background: #333; color: #fff; padding: 0.5rem 1rem; border-radius: 8px 8px 0 0; }
+    .content { border: 1px solid #ccc; border-top: none; padding: 1rem; border-radius: 0 0 8px 8px; }
+  </style>
+</head>
+<body>
+  <h1>Day 24 · Vue 3 插槽 slot</h1>
+  <p class="hint">须用 <strong>Live Server</strong> 打开。完成 <code>components.js</code> 两个 TODO 后点验证。</p>
+
+  <section>
+    <h2>实验 A：BaseCard + PageShell</h2>
+    <div id="app-a"></div>
+  </section>
+
+  <section>
+    <h2>练习 E · components.js + 概念题</h2>
+    <button id="btn-e">运行验证</button>
+    <pre class="output" id="out-e"></pre>
+  </section>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

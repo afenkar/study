@@ -4,9 +4,9 @@
 import { createCounter, createUserForm } from './reactivity.js';
 
 export const conceptAnswers = {
-  q1: '', // 基本类型 count 用？'ref' / 'reactive'
-  q2: '', // script 里读 ref 要？'value' / 'dot'
-  q3: '', // reactive 对象能整体替换赋值吗？'yes' / 'no'
+  q1: 'ref', // 基本类型 count 用？'ref' / 'reactive'
+  q2: 'value', // script 里读 ref 要？'value' / 'dot'
+  q3: 'no', // reactive 对象能整体替换赋值吗？'yes' / 'no'
 };
 
 export function runReactivityTests() {

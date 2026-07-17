@@ -9,7 +9,10 @@ export function createCounter() {
   // const count = ref(0);
   // function increment() { count.value += 1; }
   // return { count, increment };
-  throw new Error('TODO 1: 实现 createCounter');
+  // throw new Error('TODO 1: 实现 createCounter');
+  const count = ref(0)
+  function increment(){count.value += 1}
+  return{count,increment}
 }
 
 // TODO 2: 用 reactive 实现用户表单
@@ -17,5 +20,8 @@ export function createUserForm() {
   // const user = reactive({ name: '', email: '' });
   // function setName(name) { user.name = name; }
   // return { user, setName };
-  throw new Error('TODO 2: 实现 createUserForm');
+  // throw new Error('TODO 2: 实现 createUserForm');
+  const user = reactive({name:''})
+  function setName(name){user.name = name}
+  return{user,setName}
 }

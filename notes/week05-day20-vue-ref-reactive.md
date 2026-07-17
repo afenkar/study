@@ -4,11 +4,11 @@
 
 ## 今日目标
 
-- [ ] 说清 ref 和 reactive 的使用场景
-- [ ] 知道 script 里 ref 要 `.value`，template 里自动解包
-- [ ] 完成 `vue-lab/01-ref-reactive/reactivity.js` 中 2 个 TODO
-- [ ] 通过练习验证
-- [ ] 填写本笔记底部复盘
+- [x] 说清 ref 和 reactive 的使用场景
+- [x] 知道 script 里 ref 要 `.value`，template 里自动解包
+- [x] 完成 `vue-lab/01-ref-reactive/reactivity.js` 中 2 个 TODO
+- [x] 通过练习验证
+- [x] 填写本笔记底部复盘
 
 ## 实验位置
 
@@ -75,15 +75,15 @@ Vue 3 响应式底层是 **Proxy**（Day 11 学过对象引用）。
 
 ### ref / reactive 怎么选（自己的话）
 
-（填写）
+基本类型用 ref；对象和数组用 reactive
 
 ### template 里 ref 要不要 .value？script 里呢？
 
-（填写）
+template 里自动解包，不需要 `.value`；script 里需要 `.value`
 
-## 复盘 · YYYY-MM-DD
+## 复盘 · 2026-07-16
 
-- 今天学了：
-- 搞懂的一个概念：
-- 还不清楚的：
-- 明天优先：
+- 今天学了：Vue 3 ref / reactive，createCounter / createUserForm
+- 搞懂的一个概念：基本类型 ref + .value；对象 reactive 直接改属性
+- 还不清楚的：无
+- 明天优先：Day 21 · computed / watch（开启时再定）
