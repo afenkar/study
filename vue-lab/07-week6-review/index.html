@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第 6 周复盘 · Day 26 自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>第 6 周复盘 · 闭卷自测（10 题）</h1>
+  <p class="hint">覆盖 Day 23–25 组件通信。对照 <code>notes/week06-day26-week6-review.md</code> 复盘。</p>
+
+  <section>
+    <div class="q">
+      <label>1. props 数据方向？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="down">父 → 子</option>
+        <option value="up">子 → 父</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. 子组件通知父改数据，用？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="emit">emit</option>
+        <option value="props">props</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. 子组件能直接改 props 吗？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="yes">可以</option>
+        <option value="no">不可以，单向数据流</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. 插槽内容由谁提供？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="parent">父组件</option>
+        <option value="child">子组件</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. <code>&lt;slot&gt;</code> 写在哪个组件？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="parent">父组件模板</option>
+        <option value="child">子组件模板</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. 传一整块按钮+文字 UI，用？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="props">props</option>
+        <option value="slot">slot</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. Vue 3 自定义组件 v-model 默认 prop？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="modelValue">modelValue</option>
+        <option value="value">value</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. 子组件 v-model 更新应 emit？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="update">update:modelValue</option>
+        <option value="change">change</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. v-model 本质是？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="sugar">props + emit 语法糖</option>
+        <option value="slot">slot 语法糖</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. <code>&lt;MyInput v-model="x" /&gt;</code> 等价于？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="a">:modelValue="x" @update:modelValue="x = $event"</option>
+        <option value="b">:value="x" @input="x = $event"</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

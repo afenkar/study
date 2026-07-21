@@ -9,16 +9,19 @@ export const BaseCard = defineComponent({
   template: `
     <div class="card">
       <h3 class="card-title">{{ title }}</h3>
-      <div class="card-body"></div>
+      <div class="card-body">
+      <slot></slot>
+      </div>
     </div>
   `,
 });
 
 // TODO 2: PageShell
 export const PageShell = defineComponent({
+  props: { title: { type: String, required: true } },
   template: `
     <header class="header">管理后台</header>
-    <section class="content"></section>
+    <section class="content"><slot></slot></section>
   `,
 });
 

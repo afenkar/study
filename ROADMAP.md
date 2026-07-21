@@ -196,7 +196,7 @@ Study/
 | 阶段 | 状态 | 备注 |
 |------|------|------|
 | 第 1 阶段 · JS 地基 | ✅ 已完成 | Day 19 总复盘 12/12 |
-| 第 2 阶段 · Vue 深度 | 🟡 进行中 | Day 24：slot 插槽 |
+| 第 2 阶段 · Vue 深度 | 🟡 进行中 | Day 28 守卫 ✅，待 Day 29 复盘 |
 | 第 3 阶段 · 工程化 | ⚪ 未开始 | 预计第 11 周 |
 | 第 4 阶段 · 求职冲刺 | ⚪ 未开始 | 预计第 15 周 |
 
@@ -221,7 +221,11 @@ Study/
 - [x] Vue 3 computed / watch（Day 21）
 - [x] 第 5 周响应式复盘（Day 22）
 - [x] Vue 3 props / emit（Day 23）
-- [ ] Vue 3 slot 插槽（Day 24）
+- [x] Vue 3 slot 插槽（Day 24）
+- [x] Vue 3 v-model 本质（Day 25）
+- [x] 第 6 周组件通信复盘（Day 26）
+- [x] Vue Router 入门（Day 27）
+- [x] Vue Router 动态路由与守卫（Day 28）
 - [ ] Vue 3 官方文档精读第一遍
 - [ ] 完成 `vue-admin` 求职代表作
 - [ ] 过 50 道面试题

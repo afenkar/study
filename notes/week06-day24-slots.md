@@ -4,11 +4,11 @@
 
 ## 今日目标
 
-- [ ] 说清 props 和 slot 的区别
-- [ ] 会在子组件模板里写 `<slot>`，父组件传默认插槽内容
-- [ ] 完成 `vue-lab/05-slots/components.js` 中 2 个 TODO
-- [ ] 通过练习验证
-- [ ] 填写本笔记底部复盘
+- [x] 说清 props 和 slot 的区别
+- [x] 会在子组件模板里写 `<slot>`，父组件传默认插槽内容
+- [x] 完成 `vue-lab/05-slots/components.js` 中 2 个 TODO
+- [x] 通过练习验证
+- [x] 填写本笔记底部复盘
 
 ## 实验位置
 
@@ -90,33 +90,9 @@ defineComponent({
 
 ## 概念题
 
-1. 插槽内容由谁提供？`parent` / `child`
-2. 传一整块按钮+文字 UI，用 props 还是 slot？`props` / `slot`
-3. `<slot>` 标签写在哪个组件模板里？`parent` / `child`
-
-（答案填 `exercise.js` 的 `conceptAnswers`）
-
----
-
-## 写码模板
-
-### 子组件：留坑
-
-```javascript
-template: `
-  <div class="wrapper">
-    <slot></slot>
-  </div>
-`,
-```
-
-### 父组件：填坑
-
-```html
-<MyWrapper>
-  <p>任意 HTML / 组件写在这里</p>
-</MyWrapper>
-```
+1. 插槽内容由谁提供？→ **parent**
+2. 传一整块 UI → **slot**
+3. `<slot>` 写在哪个组件？→ **child**
 
 ---
 
@@ -124,15 +100,15 @@ template: `
 
 ### props 和 slot 分别适合传什么？（自己的话）
 
-
+都是父传子：props 传**数据**（title、count）；slot 传**整块 UI**（段落、按钮、嵌套组件）。
 
 ### 父组件怎么给子组件传插槽内容？（自己的话）
 
+子在 template 里写 `<slot>` 留坑；父在子组件**开闭标签之间**写 HTML，内容会渲染到 `<slot>` 位置。`:title` 仍是 props，和插槽是两套机制。
 
+## 复盘 · 2026-07-20
 
-## 复盘 · 2026-07-19
-
-- 今天学了：
-- 搞懂的一个概念：
-- 还不清楚的：
+- 今天学了：BaseCard / PageShell 默认插槽，props 传值 + slot 传 UI
+- 搞懂的一个概念：子挖坑 `<slot>`，父在标签之间填内容
+- 还不清楚的：无
 - 明天优先：Day 25 · v-model 本质

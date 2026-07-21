@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 28：动态路由与路由守卫</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    button { padding: 0.4rem 0.8rem; cursor: pointer; margin-left: auto; }
+    pre.output { color: #0a7; font-weight: 600; min-height: 1.2em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+    .nav { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; }
+    .nav a { color: #06c; text-decoration: none; }
+    .nav a.router-link-active { font-weight: 700; text-decoration: underline; }
+    .main { padding: 1rem; background: #fafafa; border-radius: 8px; min-height: 3rem; }
+    .page { font-weight: 600; margin: 0; }
+  </style>
+</head>
+<body>
+  <h1>Day 28 · 动态路由与路由守卫</h1>
+  <p class="hint">须用 <strong>Live Server</strong> 打开。完成 <code>router.js</code> 两个 TODO 后点验证。</p>
+
+  <section>
+    <h2>实验 A：用户页 + 后台权限</h2>
+    <p class="hint">未登录点「后台」应被拦回首页；点「登录」后再试。</p>
+    <div id="app"></div>
+  </section>
+
+  <section>
+    <h2>练习 E · router.js + 概念题</h2>
+    <button id="btn-e">运行验证</button>
+    <pre class="output" id="out-e"></pre>
+  </section>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
+        "vue-router": "https://unpkg.com/vue-router@4/dist/vue-router.esm-browser.js",
+        "@vue/devtools-api": "https://unpkg.com/@vue/devtools-api@6.6.4/lib/esm/index.js"
+      }
+    }
+  </script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
