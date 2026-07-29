@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 45 · FCP / LCP 自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .timeline { background: #fafafa; padding: 1rem; border-radius: 8px; font-family: ui-monospace, monospace; font-size: 0.9rem; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Day 45 · FCP / LCP · 闭卷自测（10 题）</h1>
+  <p class="hint">对照 <code>notes/week13-day45-web-vitals.md</code>。选项打开页面时随机排序。</p>
+
+  <section>
+    <h2>时间线</h2>
+    <pre class="timeline">白屏 → FCP（首次有内容）→ … → LCP（最大内容完成）</pre>
+  </section>
+
+  <section>
+    <div class="q">
+      <label>1. FCP 全称含义？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="fcp">First Contentful Paint · 首次内容绘制</option>
+        <option value="lcp">Largest Contentful Paint</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. LCP 衡量什么？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="largest">最大内容块渲染完成的时间</option>
+        <option value="first-byte">第一个字节到达的时间</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. 通常哪个时间点更晚？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="lcp">LCP</option>
+        <option value="fcp">FCP</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. FCP 主要改善的用户感受？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="blank">减少白屏时间</option>
+        <option value="scroll">滚动更流畅</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. 首屏大 banner 图加载慢主要拖累？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="lcp">LCP</option>
+        <option value="cls">CLS</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. FCP 是整页所有资源加载完吗？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="no">不是，只是首次出现任意内容</option>
+        <option value="yes">是，等于 load 事件</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. Core Web Vitals 包含？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="cwv">FCP / LCP / CLS 等</option>
+        <option value="http">HTTP 状态码</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. 压缩图片、WebP 主要优化？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="lcp">LCP（尤其首屏大图）</option>
+        <option value="cors">CORS</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. Lighthouse 可以测？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="vitals">FCP、LCP 等性能指标</option>
+        <option value="git">Git 分支</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. 骨架屏主要改善？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="fcp-feel">FCP 前的等待体验 / 感知速度</option>
+        <option value="token">Token 鉴权</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

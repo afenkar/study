@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第 7 周复盘 · Day 29 自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>第 7 周复盘 · 闭卷自测（10 题）</h1>
+  <p class="hint">覆盖 Day 27–28 Router。对照 <code>notes/week07-day29-week7-review.md</code> 复盘。</p>
+
+  <section>
+    <div class="q">
+      <label>1. 当前路由组件渲染在哪？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="view">router-view</option>
+        <option value="link">router-link</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. 菜单点击不刷新整页跳转，用？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="link">router-link</option>
+        <option value="href">普通 a href</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. 代码里主动跳转，用？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="router-push">router.push()</option>
+        <option value="route-push">route.push()</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. 路由表里挂载组件的字段？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="lower">component</option>
+        <option value="upper">Component</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. Live Server 本地实验常用哪种 history？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="hash">Hash（#/path）</option>
+        <option value="html5">HTML5 History（/path）</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. <code>/user/:id</code> 里的 <code>:id</code> 属于？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="param">动态路由 param</option>
+        <option value="query">query 查询参数</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. 读 <code>route.params.id</code> 用哪个 composable？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="route">useRoute()</option>
+        <option value="router">useRouter()</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. <code>?page=2</code> 这类参数用哪个读？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="params">route.params</option>
+        <option value="query">route.query</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. 全局跳转前拦截（权限）用？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="before">beforeEach</option>
+        <option value="after">afterEach</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. 未登录访问 /admin，守卫应？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="redirect">next('/') 重定向</option>
+        <option value="pass">next() 直接放行</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

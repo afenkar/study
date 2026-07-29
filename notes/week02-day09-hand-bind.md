@@ -1,14 +1,14 @@
-# 第 2 周 · Day 9：手写 bind + call/apply 深化
+﻿# 第 2 周 · Day 9：手写 bind + call/apply 深化
 
-> Day 3 你**用过** bind；今天**自己实现**它。力扣 2625 原题，面试高频。
+> Day 3 你**用过** bind；今天**自己实现**它。力扣 2625 原题，经典高频。
 
 ## 今日目标
 
-- [x] 说清 call / apply / bind 三者的区别（一句话）
-- [x] 理解 bind 返回的新函数「永久绑定 this」
-- [x] 完成 `js-lab/09-hand-bind/myBind.js` 中 1 个 TODO
-- [x] 通过 4 个用例验证
-- [x] 填写本笔记底部复盘
+- ✅ 说清 call / apply / bind 三者的区别（一句话）
+- ✅ 理解 bind 返回的新函数「永久绑定 this」
+- ✅ 完成 `js-lab/09-hand-bind/myBind.js` 中 1 个 TODO
+- ✅ 通过 4 个用例验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 
@@ -65,7 +65,7 @@ bind 内部需要「指定 this 并调用原函数」——这正是 **apply 干
 
 在 `myBind.js` 里实现 `Function.prototype.myBind`。
 
-**进阶（可选，今日不要求）：** 支持 `new` 调用时 this 指向实例（面试加分，先跳过）。
+**进阶（可选，今日不要求）：** 支持 `new` 调用时 this 指向实例（经典加分，先跳过）。
 
 ---
 

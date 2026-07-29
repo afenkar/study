@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 30：Pinia 入门</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    button { padding: 0.4rem 0.8rem; cursor: pointer; }
+    pre.output { color: #0a7; font-weight: 600; min-height: 1.2em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+    #app section { margin-bottom: 1rem; padding: 1rem; background: #fafafa; border-radius: 8px; }
+    .count, .greet { font-weight: 600; }
+    .name-input { width: 100%; max-width: 280px; padding: 0.4rem; }
+  </style>
+</head>
+<body>
+  <h1>Day 30 · Pinia 入门</h1>
+  <p class="hint">须用 <strong>Live Server</strong> 打开。完成 <code>stores.js</code> 两个 TODO 后点验证。</p>
+
+  <section>
+    <h2>实验 A：Counter + User Store</h2>
+    <div id="app"></div>
+  </section>
+
+  <section>
+    <h2>练习 E · stores.js + 概念题</h2>
+    <button id="btn-e">运行验证</button>
+    <pre class="output" id="out-e"></pre>
+  </section>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
+        "vue-demi": "https://unpkg.com/vue-demi@0.14.10/lib/v3/index.mjs",
+        "pinia": "https://unpkg.com/pinia@2/dist/pinia.esm-browser.js",
+        "@vue/devtools-api": "https://unpkg.com/@vue/devtools-api@6.6.4/lib/esm/index.js"
+      }
+    }
+  </script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

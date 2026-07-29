@@ -1,14 +1,14 @@
-# 第 4 周 · Day 17：事件循环进阶 · async 输出题
+﻿# 第 4 周 · Day 17：事件循环进阶 · async 输出题
 
-> Day 5 入门了宏/微任务；Day 16 用了 async/await。今天用**经典输出题**把顺序彻底练熟——面试高频。
+> Day 5 入门了宏/微任务；Day 16 用了 async/await。今天用**经典输出题**把顺序彻底练熟——经典高频。
 
 ## 今日目标
 
-- [x] 默写事件循环一句话
-- [x] 能分析 async + await + Promise + setTimeout 混合题
-- [x] 完成 `js-lab/17-event-loop-advanced` 自测（8 题）
-- [x] 错题先预测再 F12 验证
-- [x] 填写本笔记底部复盘
+- ✅ 默写事件循环一句话
+- ✅ 能分析 async + await + Promise + setTimeout 混合题
+- ✅ 完成 `js-lab/17-event-loop-advanced` 自测（8 题）
+- ✅ 错题先预测再 F12 验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 

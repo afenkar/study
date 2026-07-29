@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第 13 周复盘 · Day 46 自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; min-height: 2.2rem; }
+    body:not(.quiz-ready) select { visibility: hidden; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>第 13 周复盘 · 闭卷自测（10 题）</h1>
+  <p class="hint">覆盖 Day 44–45。须用 <strong>Live Server</strong> 打开。选项加载后随机排序；闭卷时勿看 <code>check.js</code>。</p>
+
+  <section>
+    <div class="q">
+      <label>1. HTML 解析得到？</label>
+      <select id="q1"></select>
+    </div>
+
+    <div class="q">
+      <label>2. DOM + CSSOM 合并成？</label>
+      <select id="q2"></select>
+    </div>
+
+    <div class="q">
+      <label>3. 改 width 主要触发？</label>
+      <select id="q3"></select>
+    </div>
+
+    <div class="q">
+      <label>4. 改 background-color 主要触发？</label>
+      <select id="q4"></select>
+    </div>
+
+    <div class="q">
+      <label>5. 重排和重绘开销？</label>
+      <select id="q5"></select>
+    </div>
+
+    <div class="q">
+      <label>6. FCP 衡量什么？</label>
+      <select id="q6"></select>
+    </div>
+
+    <div class="q">
+      <label>7. 通常哪个更晚？</label>
+      <select id="q7"></select>
+    </div>
+
+    <div class="q">
+      <label>8. 首屏 banner 图慢主要拖累？</label>
+      <select id="q8"></select>
+    </div>
+
+    <div class="q">
+      <label>9. 动画优先 transform 的原因？</label>
+      <select id="q9"></select>
+    </div>
+
+    <div class="q">
+      <label>10. Lighthouse 可测？</label>
+      <select id="q10"></select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

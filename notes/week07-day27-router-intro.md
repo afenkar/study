@@ -1,14 +1,14 @@
-# 第 7 周 · Day 27：Vue Router 入门
+﻿# 第 7 周 · Day 27：Vue Router 入门
 
 > 第 6 周组件通信已过关。单页应用（SPA）如何在**不刷新页面**的情况下切换页面？靠 **Vue Router**。
 
 ## 今日目标
 
-- [x] 说清 SPA、路由、组件三者的关系
-- [x] 会配置 routes、`router-link`、`router-view`
-- [x] 完成 `vue-lab/08-router-basics/router.js` 中 2 个 TODO
-- [x] 通过练习验证
-- [x] 填写本笔记底部复盘
+- ✅ 说清 SPA、路由、组件三者的关系
+- ✅ 会配置 routes、`router-link`、`router-view`
+- ✅ 完成 `vue-lab/08-router-basics/router.js` 中 2 个 TODO
+- ✅ 通过练习验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 

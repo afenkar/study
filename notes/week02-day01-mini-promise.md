@@ -1,14 +1,14 @@
-# 第 2 周 · Day 1：手写简易 Promise
+﻿# 第 2 周 · Day 1：手写简易 Promise
 
 > 第 1 周你学了 Promise **怎么用**；今天搞懂 Promise **怎么实现**。Vue 里请求、nextTick 底层都绕不开它。
 
 ## 今日目标
 
-- [x] 说清 Promise 三种状态与状态流转规则
-- [x] 理解 `then` 为什么返回新 Promise（链式调用）
-- [x] 完成 `js-lab/08-mini-promise/miniPromise.js` 中 4 个 TODO
-- [x] 通过 `exercise.js` 验证（4 个用例全绿）
-- [x] 填写本笔记底部复盘
+- ✅ 说清 Promise 三种状态与状态流转规则
+- ✅ 理解 `then` 为什么返回新 Promise（链式调用）
+- ✅ 完成 `js-lab/08-mini-promise/miniPromise.js` 中 4 个 TODO
+- ✅ 通过 `exercise.js` 验证（4 个用例全绿）
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 
@@ -95,7 +95,7 @@ pending（等待）→ reject → rejected（失败，不可逆）
 
 （无则写「无」—— 老师已带写一遍，建议对照注释再手敲一遍加深记忆）
 
-### 手写 Promise 三句话（面试用）
+### 手写 Promise 三句话（经典用）
 
 1. **constructor**：存 state/value/reason + callbacks 队列，executor 里调 resolve/reject 改状态并通知等待者
 2. **then**：返回新 Promise；pending 时登记回调，settled 时用 queueMicrotask 异步执行

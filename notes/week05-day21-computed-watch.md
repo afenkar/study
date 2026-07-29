@@ -1,15 +1,15 @@
-# 第 5 周 · Day 21：computed 与 watch
+﻿# 第 5 周 · Day 21：computed 与 watch
 
 > Day 20 会了 ref / reactive；今天学**派生状态**和**副作用监听**——computed 算出来、watch 盯着变。
 
 ## 今日目标
 
-- [x] 说清 computed、watch、普通 method 的区别与使用场景
-- [x] 会用 `computed(() => ...)` 写派生数据
-- [x] 会用 `watch(source, callback)` 做副作用（日志、请求、本地存储等）
-- [x] 完成 `vue-lab/02-computed-watch/derived.js` 中 2 个 TODO
-- [x] 通过练习验证
-- [x] 填写本笔记底部复盘
+- ✅ 说清 computed、watch、普通 method 的区别与使用场景
+- ✅ 会用 `computed(() => ...)` 写派生数据
+- ✅ 会用 `watch(source, callback)` 做副作用（日志、请求、本地存储等）
+- ✅ 完成 `vue-lab/02-computed-watch/derived.js` 中 2 个 TODO
+- ✅ 通过练习验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 

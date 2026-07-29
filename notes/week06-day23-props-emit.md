@@ -1,14 +1,14 @@
-# 第 6 周 · Day 23：组件通信 · props 与 emit
+﻿# 第 6 周 · Day 23：组件通信 · props 与 emit
 
 > 第 5 周响应式四件套已过关。组件之间怎么传数据？**父 → 子用 props，子 → 父用 emit。**
 
 ## 今日目标
 
-- [x] 说清 props / emit 的数据流向与使用场景
-- [x] 会声明 props、在子组件 emit 事件
-- [x] 完成 `vue-lab/04-props-emit/components.js` 中 2 个 TODO
-- [x] 通过练习验证
-- [x] 填写本笔记底部复盘
+- ✅ 说清 props / emit 的数据流向与使用场景
+- ✅ 会声明 props、在子组件 emit 事件
+- ✅ 完成 `vue-lab/04-props-emit/components.js` 中 2 个 TODO
+- ✅ 通过练习验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 

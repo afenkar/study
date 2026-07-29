@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第 8 周复盘 · Day 31 自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>第 8 周复盘 · 闭卷自测（10 题）</h1>
+  <p class="hint">覆盖 Day 30 Pinia。对照 <code>notes/week08-day31-week8-review.md</code> 复盘。</p>
+
+  <section>
+    <div class="q">
+      <label>1. 定义 store 用？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="defineStore">defineStore</option>
+        <option value="defineComponent">defineComponent</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. 跨页面共享登录用户，用？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="pinia">Pinia</option>
+        <option value="props">props 逐层传递</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. 组件里取用 store？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="useStore">useXxxStore()</option>
+        <option value="ref">ref()</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. store 的数据主要存在？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="state">state</option>
+        <option value="actions">actions</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. 修改 store 数据推荐在？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="actions">actions</option>
+        <option value="template">template 里直接改</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. 安装 Pinia 到 app？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="use">app.use(createPinia())</option>
+        <option value="mount">app.mount(createPinia())</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. actions 里 <code>this</code> 指向？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="store">store 实例</option>
+        <option value="closure">外层闭包</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. getters 类似 Vue 的？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="computed">computed</option>
+        <option value="watch">watch</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. 单个组件内的表单输入状态，优先？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="ref">ref / reactive</option>
+        <option value="pinia">Pinia</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. Pinia 主要解决？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="share">跨组件 / 跨页面共享状态</option>
+        <option value="route">路由跳转</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

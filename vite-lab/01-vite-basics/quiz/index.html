@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 37 · Vite 概念自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Day 37 · Vite 概念自测（8 题）</h1>
+  <p class="hint">对照 <code>notes/week11-day37-vite-intro.md</code> 闭卷作答。</p>
+
+  <section>
+    <div class="q">
+      <label>1. npm run build 的产物在哪？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="dist">dist/ 目录</option>
+        <option value="src">src/ 目录</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. npm run dev 主要干什么？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="dev-server">启动开发服务器 + HMR</option>
+        <option value="deploy">直接部署到生产</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. 前端可读的环境变量前缀？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="vite">VITE_</option>
+        <option value="any">任意名字都行</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. 代码里读环境变量？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="meta">import.meta.env.VITE_XXX</option>
+        <option value="process">process.env.VITE_XXX</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. npm run dev 时 MODE 通常是？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="development">development</option>
+        <option value="production">production</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. .env.production 何时生效？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="build">npm run build 时</option>
+        <option value="dev">npm run dev 时</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. npm run preview 干什么？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="preview-dist">本地预览 dist 打包结果</option>
+        <option value="run-tests">跑单元测试</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. HMR 是什么？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="hmr">热更新，改代码局部刷新</option>
+        <option value="reload">每次保存整页强制刷新</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

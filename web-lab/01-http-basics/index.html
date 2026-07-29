@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 40 · HTTP 入门自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .diagram { background: #fafafa; padding: 1rem; border-radius: 8px; font-family: ui-monospace, monospace; font-size: 0.9rem; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Day 40 · HTTP 入门 · 闭卷自测（10 题）</h1>
+  <p class="hint">对照 <code>notes/week12-day40-http-intro.md</code>。先看下面示意图，再做题。</p>
+
+  <section>
+    <h2>请求 / 响应示意</h2>
+    <pre class="diagram">Request:  Method + URL + Headers + Body?
+Response: Status Code + Headers + Body</pre>
+  </section>
+
+  <section>
+    <div class="q">
+      <label>1. HTTP 一次交互包含？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="req-res">一次请求 + 一次响应</option>
+        <option value="req-only">只有请求</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. 查用户列表用什么 Method？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="get">GET</option>
+        <option value="post">POST</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. 提交登录表单用什么 Method？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="post">POST</option>
+        <option value="get">GET</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. GET 请求通常带 Body 吗？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="no">通常不带</option>
+        <option value="yes">必须带</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. 状态码 200 表示？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="ok">成功</option>
+        <option value="not-found">资源不存在</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. 接口路径写错了，后端返回？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="404">404</option>
+        <option value="200">200</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. token 过期 / 没登录？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="401">401</option>
+        <option value="403">403</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. 登录了但没有权限访问？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="403">403</option>
+        <option value="401">401</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. 参数格式错误 / 缺必填字段？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="400">400</option>
+        <option value="500">500</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. 服务器代码抛错 / 数据库挂了？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="500">500</option>
+        <option value="404">404</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

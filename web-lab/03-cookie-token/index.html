@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 42 · Cookie / Token 自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .flow { background: #fafafa; padding: 1rem; border-radius: 8px; font-size: 0.85rem; font-family: ui-monospace, monospace; white-space: pre-wrap; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Day 42 · Cookie / Token · 闭卷自测（10 题）</h1>
+  <p class="hint">对照 <code>notes/week12-day42-cookie-token.md</code>。</p>
+
+  <section>
+    <h2>Token 流程速记</h2>
+    <pre class="flow">登录 → 拿 token → 存起来 → 请求带 Authorization → 401 跳登录</pre>
+  </section>
+
+  <section>
+    <div class="q">
+      <label>1. 服务器让浏览器存 Cookie 用哪个响应头？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="set-cookie">Set-Cookie</option>
+        <option value="cookie">Cookie</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. 防 JS 读取 Cookie 的属性？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="httponly">HttpOnly</option>
+        <option value="secure">Secure</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. Cookie Session 的状态主要存在？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="server">服务器</option>
+        <option value="browser">浏览器 localStorage</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. Token 鉴权请求通常放哪个 Header？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="auth">Authorization: Bearer token</option>
+        <option value="cookie">Cookie: token=xxx</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. 前后端分离项目更常用？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="token">Token / JWT</option>
+        <option value="session">Cookie Session</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. 登录成功后前端第一步？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="save">保存 token</option>
+        <option value="delete">删除 token</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. token 无效 / 过期，后端常返回？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="401">401</option>
+        <option value="403">403</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. 登录了但无权访问某接口？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="403">403</option>
+        <option value="401">401</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. Vue 项目里统一带 token 常用？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="interceptor">axios 请求拦截器</option>
+        <option value="template">每个 template 手写</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. Router 守卫没 token 应？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="login">跳转登录页</option>
+        <option value="home">放行进首页</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

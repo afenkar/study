@@ -1,14 +1,14 @@
-# 第 6 周 · Day 25：v-model 本质
+﻿# 第 6 周 · Day 25：v-model 本质
 
 > Day 23 props/emit、Day 24 slot。`v-model` 不是新魔法，是 **props + emit 的语法糖**。
 
 ## 今日目标
 
-- [x] 说清 v-model 在自定义组件上的本质
-- [x] 能实现 `modelValue` + `update:modelValue`
-- [x] 完成 `vue-lab/06-v-model/components.js` 中 2 个 TODO
-- [x] 通过练习验证
-- [x] 填写本笔记底部复盘
+- ✅ 说清 v-model 在自定义组件上的本质
+- ✅ 能实现 `modelValue` + `update:modelValue`
+- ✅ 完成 `vue-lab/06-v-model/components.js` 中 2 个 TODO
+- ✅ 通过练习验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 

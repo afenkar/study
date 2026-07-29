@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 41 · CORS 与缓存自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .diagram { background: #fafafa; padding: 1rem; border-radius: 8px; font-size: 0.9rem; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Day 41 · CORS + 缓存 · 闭卷自测（10 题）</h1>
+  <p class="hint">对照 <code>notes/week12-day41-cors-cache.md</code>。</p>
+
+  <section>
+    <h2>同源三要素</h2>
+    <p class="diagram">协议 + 域名 + 端口 — 三者相同才是<strong>同源</strong></p>
+  </section>
+
+  <section>
+    <div class="q">
+      <label>1. http://a.com:5173 → http://a.com:3000/api？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="cross">跨域（端口不同）</option>
+        <option value="same">同源</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. 跨域时 JS 读不到响应，主要是？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="browser">浏览器同源策略</option>
+        <option value="network">网线断了</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. 生产环境 CORS 主要靠谁配？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="server">后端 / 服务器响应头</option>
+        <option value="frontend">前端改 fetch 参数就行</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. 允许某源访问的响应头？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="acao">Access-Control-Allow-Origin</option>
+        <option value="auth">Authorization</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. dev 本地常用跨域解法？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="proxy">Vite / devServer proxy 代理</option>
+        <option value="ignore">浏览器禁用安全策略</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. PUT + 自定义头可能先发？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="options">OPTIONS 预检</option>
+        <option value="get">GET 请求</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. 强缓存主要靠哪个 Header？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="cache-control">Cache-Control（如 max-age）</option>
+        <option value="content-type">Content-Type</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. 强缓存未过期时，浏览器会？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="local">直接用本地副本，不请求服务器</option>
+        <option value="always">每次问服务器要完整文件</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. 协商缓存资源未变，状态码常是？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="304">304 Not Modified</option>
+        <option value="404">404</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. 带 hash 的 app-xxxxx.js 适合？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="long-cache">长期强缓存</option>
+        <option value="no-cache">永远不缓存</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

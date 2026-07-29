@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第 11 周复盘 · Day 39 自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>第 11 周复盘 · 闭卷自测（10 题）</h1>
+  <p class="hint">覆盖 Day 37–38 Vite。对照 <code>notes/week11-day39-week11-review.md</code>。</p>
+
+  <section>
+    <div class="q">
+      <label>1. npm run dev 主要干什么？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="dev-server">启动开发服务器 + HMR</option>
+        <option value="build-dist">打包到 dist</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. npm run build 产物在哪？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="dist">dist/ 目录</option>
+        <option value="src">src/ 目录</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. npm run preview 干什么？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="preview">本地预览 dist 打包结果</option>
+        <option value="dev">替代 npm run dev</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. 前端可读的环境变量前缀？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="vite">VITE_</option>
+        <option value="any">任意名字</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. 代码里读 Vite 环境变量？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="meta">import.meta.env.VITE_XXX</option>
+        <option value="process">process.env.VITE_XXX</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. dev 下 env 优先级最高的是？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="dev-local">.env.development.local</option>
+        <option value="local">.env.local</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. .env.local 应该提交 git 吗？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="no">不提交</option>
+        <option value="yes">必须提交</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. 改 .env 后 dev 界面没变，要先？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="restart">重启 npm run dev</option>
+        <option value="refresh">只刷新浏览器</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. 动态 import 拆包的主要好处？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="split">按需加载，减小首屏包</option>
+        <option value="faster-dev">让 dev 启动更快</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. build 拆几个 chunk 由什么决定？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="source">源码里的 import() 写法</option>
+        <option value="click">dev 里点没点按钮</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

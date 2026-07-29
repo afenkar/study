@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第 10 周复盘 · Day 35 自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>第 10 周复盘 · 闭卷自测（10 题）</h1>
+  <p class="hint">覆盖 Day 34 性能 + DevTools。对照 <code>notes/week10-day35-week10-review.md</code>。</p>
+
+  <section>
+    <div class="q">
+      <label>1. Tab 标签频繁切换显隐？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="v-show">v-show</option>
+        <option value="v-if">v-if</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. 权限不够才渲染的大表单？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="v-if">v-if</option>
+        <option value="v-show">v-show</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. v-for 的 :key 最好用什么？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="id">稳定唯一的 id</option>
+        <option value="index">数组 index</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. index 当 key，列表增删时容易？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="chaos">状态错乱 / DOM 复用错</option>
+        <option value="fast">渲染更快</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. Tab 切换要保留输入框内容？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="keep-alive">keep-alive</option>
+        <option value="v-show">只用 v-show</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. 路由页面按需加载，写法是？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="import">() => import('./Page.vue')</option>
+        <option value="static">直接 import Page from './Page.vue'</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. template 里重复 heavy 计算，优先？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="computed">computed</option>
+        <option value="method">每次调 method</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. 性能优化第一步？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="measure">DevTools 先测量</option>
+        <option value="guess">凭感觉改 v-if</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. 查看组件 props / data，用 DevTools 哪个面板？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="components">Components</option>
+        <option value="network">Network</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. 调试 Pinia store 状态，优先？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="pinia">Pinia 面板</option>
+        <option value="console">只用 console.log</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

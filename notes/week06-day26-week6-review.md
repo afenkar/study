@@ -1,13 +1,13 @@
-# 第 6 周 · Day 26：组件通信复盘自测
+﻿# 第 6 周 · Day 26：组件通信复盘自测
 
 > Day 23 props/emit、Day 24 slot、Day 25 v-model——今天**闭卷自测**，把组件通信串起来。
 
 ## 今日目标
 
-- [x] 完成 `vue-lab/07-week6-review` 自测（10 题）
-- [x] 闭卷口述：props / emit / slot / v-model 各一句
-- [x] 错题回看 Day 23–25 笔记
-- [x] 填写本笔记底部复盘
+- ✅ 完成 `vue-lab/07-week6-review` 自测（10 题）
+- ✅ 闭卷口述：props / emit / slot / v-model 各一句
+- ✅ 错题回看 Day 23–25 笔记
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 

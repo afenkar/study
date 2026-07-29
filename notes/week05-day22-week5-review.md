@@ -1,13 +1,13 @@
-# 第 5 周 · Day 22：响应式复盘自测
+﻿# 第 5 周 · Day 22：响应式复盘自测
 
 > Day 20 ref/reactive、Day 21 computed/watch——今天**闭卷自测**，把 Vue 3 响应式四件套串起来。
 
 ## 今日目标
 
-- [x] 完成 `vue-lab/03-week5-review` 自测（10 题）
-- [x] 闭卷口述：ref/reactive、computed/watch 各一句
-- [x] 错题回看 Day 20 / 21 笔记
-- [x] 填写本笔记底部复盘
+- ✅ 完成 `vue-lab/03-week5-review` 自测（10 题）
+- ✅ 闭卷口述：ref/reactive、computed/watch 各一句
+- ✅ 错题回看 Day 20 / 21 笔记
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 34：性能优化入门</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+    .demo-box { padding: 1rem; background: #fafafa; border-radius: 8px; margin: 0.5rem 0; }
+    .demo-row { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+    @media (max-width: 600px) { .demo-row { grid-template-columns: 1fr; } }
+    .tag { padding: 0.5rem; background: #e8f4ff; border-radius: 4px; }
+    button { padding: 0.35rem 0.75rem; cursor: pointer; margin-top: 0.5rem; }
+    .tab-btns { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .tab-btns button { margin-top: 0; }
+    .tab-btns button.active { background: #1677ff; color: #fff; border-color: #1677ff; }
+    .tab-panel input { width: 100%; max-width: 260px; padding: 0.4rem; margin: 0.35rem 0; }
+    .tab-status { font-size: 0.9rem; color: #555; margin-top: 0.5rem; }
+    .warn { color: #c41; font-weight: 600; }
+    .ok { color: #0a7; font-weight: 600; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    pre.output { color: #0a7; font-weight: 600; min-height: 1.2em; }
+  </style>
+</head>
+<body>
+  <h1>Day 34 · 性能优化入门</h1>
+  <p class="hint">须用 <strong>Live Server</strong> 打开。先看实验 A、B，再<strong>闭卷</strong>做下面 10 题。</p>
+
+  <section>
+    <h2>实验 A：v-if vs v-show（F12 看 DOM）</h2>
+    <div class="demo-row">
+      <div id="demo-if"></div>
+      <div id="demo-show"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>实验 B：keep-alive 保留 Tab 输入（动手试）</h2>
+    <p class="hint">步骤：① 在 Tab A 输入框打字 → ② 切到 Tab B → ③ 再切回 Tab A，对比左右两边输入是否还在。</p>
+    <div class="demo-row">
+      <div id="demo-no-keep"></div>
+      <div id="demo-keep"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>练习 E · 场景自测（10 题）</h2>
+
+    <div class="q">
+      <label>1. Tab 标签频繁切换显隐？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="v-show">v-show</option>
+        <option value="v-if">v-if</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. 权限不够才渲染的大表单？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="v-if">v-if</option>
+        <option value="v-show">v-show</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. v-show 隐藏靠什么？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="display">CSS display</option>
+        <option value="destroy">销毁 DOM 节点</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. v-for 的 :key 优先？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="id">item.id</option>
+        <option value="index">数组 index</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. index 作 key 的主要风险？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="reorder-bug">增删排序后状态错乱</option>
+        <option value="no-risk">没有风险</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. 路由按需加载写法？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="import-fn">() => import('...')</option>
+        <option value="static-import">顶部 static import</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. 列表过滤后展示，优先？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="computed">computed</option>
+        <option value="method">method</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. 首屏不需要的管理页？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="lazy">懒加载</option>
+        <option value="eager">全部打进首包</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. Tab 切换保留输入框内容？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="keep-alive">keep-alive</option>
+        <option value="v-show">只用 v-show</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. 性能优化第一步？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="measure">先测量定位瓶颈</option>
+        <option value="guess">凭感觉改</option>
+      </select>
+    </div>
+
+    <button id="btn-e">验证答案</button>
+    <pre class="output" id="out-e"></pre>
+  </section>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
+  <script type="module" src="demo.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

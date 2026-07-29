@@ -1,9 +1,9 @@
-# 前端中级提升 · 总体目标与路线图
+﻿# 前端中级提升 · 总体目标与路线图
 
 > 创建日期：2026-07-02  
 > 预计周期：16 周（约 4 个月）  
 > 每日投入：3 小时  
-> 当前阶段：**第 1 阶段 · JavaScript 地基**（进行中）
+> 当前阶段：**第 3 阶段 · 工程化 + 浏览器 + 网络**（进行中）
 
 ---
 
@@ -145,12 +145,23 @@
 Study/
 ├── ROADMAP.md              ← 本文件：总体目标，迷路时先看这个
 ├── js-lab/                 ← JS 原理实验与小项目
-│   ├── 01-scope-closure/   ← 第 1 天：作用域与闭包 ✅ 已创建
-│   └── 02-pure-js-todo/    ← 第 4 周验收项目（待创建）
-├── vue-admin/              ← 求职代表作（第 5 周启动）
+├── vue-lab/                ← Vue 3 实验（CDN）
+├── vite-lab/               ← Vite 工程化实验（第 11 周）
+│   ├── 01-vite-basics/     ← Day 37
+│   ├── 02-env-bundle/      ← Day 38
+│   └── 03-week11-review/   ← Day 39
+├── web-lab/                ← HTTP / 浏览器 / 网络（第 12 周起）
+│   ├── 01-http-basics/     ← Day 40：HTTP 入门
+│   ├── 02-cors-cache/      ← Day 41：CORS + 缓存
+│   ├── 03-cookie-token/    ← Day 42：Cookie / Token
+│   ├── 04-week12-review/    ← Day 43：HTTP 周复盘
+│   ├── 05-browser-render/   ← Day 44：浏览器渲染
+│   ├── 06-web-vitals/       ← Day 45：FCP / LCP
+│   └── 07-week13-review/    ← Day 46：浏览器周复盘
+├── vue-admin/              ← 求职代表作（待创建）
 ├── notes/                  ← 每日学习笔记
 │   └── week01-day01-scope-closure.md
-└── interview/              ← 面试题整理与自测（第 14 周集中填充）
+└── interview/              ← 面试题整理与自测（Vue 旁路已启动，第 4 阶段继续用）
 ```
 
 ---
@@ -196,39 +207,58 @@ Study/
 | 阶段 | 状态 | 备注 |
 |------|------|------|
 | 第 1 阶段 · JS 地基 | ✅ 已完成 | Day 19 总复盘 12/12 |
-| 第 2 阶段 · Vue 深度 | 🟡 进行中 | Day 28 守卫 ✅，待 Day 29 复盘 |
-| 第 3 阶段 · 工程化 | ⚪ 未开始 | 预计第 11 周 |
+| 第 2 阶段 · Vue 深度 | ✅ 已完成 | Day 36 总复盘 12/12 |
+| 第 3 阶段 · 工程化 | 🟡 进行中 | Day 46：第 13 周复盘 |
+| Vue 面试旁路（方案 B） | 🟡 进行中 | 巩固块 30–40 分钟/天 · 见 `interview/vue-schedule-14d.md` |
 | 第 4 阶段 · 求职冲刺 | ⚪ 未开始 | 预计第 15 周 |
 
 ### 里程碑打卡
 
-- [x] 完成 `js-lab/01-scope-closure` 全部实验
-- [x] 完成纯 JS Todo 项目（Day 6）
-- [x] 第 1 周复盘自测（Day 7）
-- [x] 手写简易 Promise（Day 8）
-- [x] 手写 bind（Day 9）
-- [x] Class 与继承（Day 10）
-- [x] 深拷贝与浅拷贝（Day 11）
-- [x] 手写 new（Day 12）
-- [x] 防抖与节流（Day 13）
-- [x] 第 2–3 周复盘自测（Day 14）
-- [x] Promise.all / race（Day 15）
-- [x] async/await 串行执行（Day 16）
-- [x] 事件循环进阶输出题（Day 17）
-- [x] 第 4 周复盘自测（Day 18）
-- [x] 第 1 阶段总复盘（Day 19）
-- [x] Vue 3 ref / reactive（Day 20）
-- [x] Vue 3 computed / watch（Day 21）
-- [x] 第 5 周响应式复盘（Day 22）
-- [x] Vue 3 props / emit（Day 23）
-- [x] Vue 3 slot 插槽（Day 24）
-- [x] Vue 3 v-model 本质（Day 25）
-- [x] 第 6 周组件通信复盘（Day 26）
-- [x] Vue Router 入门（Day 27）
-- [x] Vue Router 动态路由与守卫（Day 28）
+- ✅ 完成 `js-lab/01-scope-closure` 全部实验
+- ✅ 完成纯 JS Todo 项目（Day 6）
+- ✅ 第 1 周复盘自测（Day 7）
+- ✅ 手写简易 Promise（Day 8）
+- ✅ 手写 bind（Day 9）
+- ✅ Class 与继承（Day 10）
+- ✅ 深拷贝与浅拷贝（Day 11）
+- ✅ 手写 new（Day 12）
+- ✅ 防抖与节流（Day 13）
+- ✅ 第 2–3 周复盘自测（Day 14）
+- ✅ Promise.all / race（Day 15）
+- ✅ async/await 串行执行（Day 16）
+- ✅ 事件循环进阶输出题（Day 17）
+- ✅ 第 4 周复盘自测（Day 18）
+- ✅ 第 1 阶段总复盘（Day 19）
+- ✅ Vue 3 ref / reactive（Day 20）
+- ✅ Vue 3 computed / watch（Day 21）
+- ✅ 第 5 周响应式复盘（Day 22）
+- ✅ Vue 3 props / emit（Day 23）
+- ✅ Vue 3 slot 插槽（Day 24）
+- ✅ Vue 3 v-model 本质（Day 25）
+- ✅ 第 6 周组件通信复盘（Day 26）
+- ✅ Vue Router 入门（Day 27）
+- ✅ Vue Router 动态路由与守卫（Day 28）
+- ✅ 第 7 周 Router 复盘（Day 29）
+- ✅ Pinia 入门（Day 30）
+- ✅ 第 8 周 Pinia 复盘（Day 31）
+- ✅ composable 入门（Day 32）
+- ✅ 第 9 周 composable 复盘（Day 33）
+- ✅ 性能优化入门（Day 34）
+- ✅ 第 10 周性能 + DevTools 复盘（Day 35）
+- ✅ 第 2 阶段总复盘（Day 36）
+- ✅ Vite 入门 dev / build（Day 37）
+- ✅ 环境变量 + 打包分析（Day 38）
+- ✅ 第 11 周 Vite 复盘（Day 39）
+- ✅ HTTP 入门（Day 40）
+- ✅ 跨域 CORS + 缓存（Day 41）
+- ✅ Cookie / Token 鉴权（Day 42）
+- ✅ 第 12 周 HTTP 复盘（Day 43）
+- ✅ 浏览器渲染入门（Day 44）
+- ✅ Web 性能指标 FCP / LCP（Day 45）
 - [ ] Vue 3 官方文档精读第一遍
 - [ ] 完成 `vue-admin` 求职代表作
-- [ ] 过 50 道面试题
+- [ ] 过 50 道面试题（Vue 旁路：`interview/vue-p0` + `vue-p1` ≈ 60 题）
+- [ ] Vue 面试 14 日日程打卡完成（`interview/vue-schedule-14d.md`）
 - [ ] 更新简历并开始投递
 
 ---
@@ -247,6 +277,7 @@ Study/
 | 日期 | 变更 |
 |------|------|
 | 2026-07-02 | 初版：基于 2 年经验、Vue 3 主攻、JS 基础补起、每日 3 小时 |
+| 2026-07-28 | 增加 Vue 面试旁路方案 B：`interview/vue-*`，与第 3 阶段并行 |
 
 ---
 

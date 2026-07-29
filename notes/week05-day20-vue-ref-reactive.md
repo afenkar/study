@@ -1,14 +1,14 @@
-# 第 5 周 · Day 20：Vue 3 响应式入门 · ref 与 reactive
+﻿# 第 5 周 · Day 20：Vue 3 响应式入门 · ref 与 reactive
 
 > 第 1 阶段 JS 地基已过关。Vue 3 核心就是**响应式**——数据变了，视图自动更新。今天先搞懂 `ref` 和 `reactive`。
 
 ## 今日目标
 
-- [x] 说清 ref 和 reactive 的使用场景
-- [x] 知道 script 里 ref 要 `.value`，template 里自动解包
-- [x] 完成 `vue-lab/01-ref-reactive/reactivity.js` 中 2 个 TODO
-- [x] 通过练习验证
-- [x] 填写本笔记底部复盘
+- ✅ 说清 ref 和 reactive 的使用场景
+- ✅ 知道 script 里 ref 要 `.value`，template 里自动解包
+- ✅ 完成 `vue-lab/01-ref-reactive/reactivity.js` 中 2 个 TODO
+- ✅ 通过练习验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 
@@ -53,7 +53,7 @@ user.name = '李四';          // 直接改属性
 
 ---
 
-## 和 JS 闭包的关系（面试加分）
+## 和 JS 闭包的关系（经典加分）
 
 Vue 3 响应式底层是 **Proxy**（Day 11 学过对象引用）。
 

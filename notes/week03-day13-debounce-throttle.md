@@ -1,14 +1,14 @@
-# 第 3 周 · Day 13：防抖与节流
+﻿# 第 3 周 · Day 13：防抖与节流
 
 > 搜索框连敲、窗口狂拖 resize——若每次都请求，会打爆接口。今天用**闭包 + 定时器**手写 `debounce` / `throttle`。
 
 ## 今日目标
 
-- [x] 一句话分清防抖 vs 节流
-- [x] 知道各自典型使用场景
-- [x] 完成 `js-lab/13-debounce-throttle/debounceThrottle.js` 中 2 个 TODO
-- [x] 通过练习验证
-- [x] 填写本笔记底部复盘
+- ✅ 一句话分清防抖 vs 节流
+- ✅ 知道各自典型使用场景
+- ✅ 完成 `js-lab/13-debounce-throttle/debounceThrottle.js` 中 2 个 TODO
+- ✅ 通过练习验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 

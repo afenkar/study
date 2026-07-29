@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 44 · 浏览器渲染自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .flow { background: #fafafa; padding: 1rem; border-radius: 8px; font-size: 0.85rem; font-family: ui-monospace, monospace; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Day 44 · 浏览器渲染 · 闭卷自测（10 题）</h1>
+  <p class="hint">对照 <code>notes/week13-day44-browser-render.md</code>。</p>
+
+  <section>
+    <h2>渲染流程速记</h2>
+    <pre class="flow">DOM + CSSOM → 渲染树 → Layout → Paint → Composite</pre>
+  </section>
+
+  <section>
+    <div class="q">
+      <label>1. HTML 解析得到？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="dom">DOM 树</option>
+        <option value="cssom">CSSOM 树</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. CSS 解析得到？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="cssom">CSSOM 树</option>
+        <option value="dom">DOM 树</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. DOM + CSSOM 合并成？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="render-tree">渲染树（Render Tree）</option>
+        <option value="http">HTTP 响应</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. 计算元素位置大小叫？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="layout">Layout / 重排 Reflow</option>
+        <option value="paint">Paint / 重绘</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. 改 color 背景色主要触发？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="repaint">重绘 Repaint</option>
+        <option value="reflow">重排 Reflow</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. 改 width / height 主要触发？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="reflow">重排 Reflow</option>
+        <option value="repaint">仅重绘、一定不重排</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. 重排和重绘开销？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="reflow-more">重排开销通常更大</option>
+        <option value="same">完全一样</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. display:none 的元素在渲染树里？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="no">一般不在渲染树</option>
+        <option value="yes">一定在</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. 动画优先用 transform 的原因之一？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="composite">可能只合成，少触发重排</option>
+        <option value="reflow">强制重排更快</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. 重排后通常也会？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="repaint">触发重绘</option>
+        <option value="never">永不重绘</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>

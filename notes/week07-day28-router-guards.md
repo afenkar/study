@@ -1,14 +1,14 @@
-# 第 7 周 · Day 28：动态路由与路由守卫
+﻿# 第 7 周 · Day 28：动态路由与路由守卫
 
 > Day 27 会了基础路由；今天学 **URL 带参数** 和 **跳转前拦截**——后台权限的基础。
 
 ## 今日目标
 
-- [x] 会配置动态路由 `/user/:id`，读取 `route.params`
-- [x] 会用 `beforeEach` 做全局前置守卫
-- [x] 完成 `vue-lab/09-router-guards/` 中 2 个 TODO
-- [x] 通过练习验证
-- [x] 填写本笔记底部复盘
+- ✅ 会配置动态路由 `/user/:id`，读取 `route.params`
+- ✅ 会用 `beforeEach` 做全局前置守卫
+- ✅ 完成 `vue-lab/09-router-guards/` 中 2 个 TODO
+- ✅ 通过练习验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 

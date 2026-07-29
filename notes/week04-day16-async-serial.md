@@ -1,14 +1,14 @@
-# 第 4 周 · Day 16：async/await 串行执行
+﻿# 第 4 周 · Day 16：async/await 串行执行
 
 > Day 15 学了并行 `Promise.all`；业务里也常要**一个接一个**跑（串行）。今天用 async/await 实现 `sleep` 和 `runSerial`。
 
 ## 今日目标
 
-- [x] 说清串行 vs 并行的区别
-- [x] 会用 `await` + `try/catch` 处理异步错误
-- [x] 完成 `js-lab/16-async-serial/asyncSerial.js` 中 2 个 TODO
-- [x] 通过练习验证
-- [x] 填写本笔记底部复盘
+- ✅ 说清串行 vs 并行的区别
+- ✅ 会用 `await` + `try/catch` 处理异步错误
+- ✅ 完成 `js-lab/16-async-serial/asyncSerial.js` 中 2 个 TODO
+- ✅ 通过练习验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 

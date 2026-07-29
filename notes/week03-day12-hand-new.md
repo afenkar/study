@@ -1,14 +1,14 @@
-# 第 3 周 · Day 12：手写 new
+﻿# 第 3 周 · Day 12：手写 new
 
 > Day 4 你知道 `new` 会建对象；Day 10 用 `class` 仍靠 `new`。今天**自己实现** `myNew`，把四步彻底讲清。
 
 ## 今日目标
 
-- [x] 默写 `new` 做的 4 件事
-- [x] 理解：构造函数若 `return` 对象，则以该对象为准
-- [x] 完成 `js-lab/12-hand-new/myNew.js` 中 TODO
-- [x] 通过练习验证
-- [x] 填写本笔记底部复盘
+- ✅ 默写 `new` 做的 4 件事
+- ✅ 理解：构造函数若 `return` 对象，则以该对象为准
+- ✅ 完成 `js-lab/12-hand-new/myNew.js` 中 TODO
+- ✅ 通过练习验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 
@@ -55,7 +55,7 @@ return (result !== null && typeof result === 'object') ? result : obj;
 
 ---
 
-## 返回值的坑（面试常问）
+## 返回值的坑（经典常问）
 
 ```javascript
 function A() { this.x = 1; return { y: 2 }; }

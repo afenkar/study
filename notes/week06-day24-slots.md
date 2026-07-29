@@ -1,14 +1,14 @@
-# 第 6 周 · Day 24：插槽 slot 入门
+﻿# 第 6 周 · Day 24：插槽 slot 入门
 
 > Day 23 用 props / emit 传**数据**；今天学**传模板**——父组件往子组件里「挖的空位」塞内容。
 
 ## 今日目标
 
-- [x] 说清 props 和 slot 的区别
-- [x] 会在子组件模板里写 `<slot>`，父组件传默认插槽内容
-- [x] 完成 `vue-lab/05-slots/components.js` 中 2 个 TODO
-- [x] 通过练习验证
-- [x] 填写本笔记底部复盘
+- ✅ 说清 props 和 slot 的区别
+- ✅ 会在子组件模板里写 `<slot>`，父组件传默认插槽内容
+- ✅ 完成 `vue-lab/05-slots/components.js` 中 2 个 TODO
+- ✅ 通过练习验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 

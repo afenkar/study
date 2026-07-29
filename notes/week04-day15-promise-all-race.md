@@ -1,14 +1,14 @@
-# 第 4 周 · Day 15：Promise.all 与 Promise.race
+﻿# 第 4 周 · Day 15：Promise.all 与 Promise.race
 
 > Day 8 你实现了单个 Promise；业务里常要「等一批都完成」或「谁先完成用谁」。今天手写 `myAll` / `myRace`。
 
 ## 今日目标
 
-- [x] 说清 `Promise.all` 与 `Promise.race` 的区别
-- [x] 知道 all 失败短路、全部成功才 resolve
-- [x] 完成 `js-lab/15-promise-all-race/promiseCombo.js` 中 2 个 TODO
-- [x] 通过练习验证
-- [x] 填写本笔记底部复盘
+- ✅ 说清 `Promise.all` 与 `Promise.race` 的区别
+- ✅ 知道 all 失败短路、全部成功才 resolve
+- ✅ 完成 `js-lab/15-promise-all-race/promiseCombo.js` 中 2 个 TODO
+- ✅ 通过练习验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 

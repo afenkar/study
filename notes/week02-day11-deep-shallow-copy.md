@@ -1,15 +1,15 @@
-# 第 2 周 · Day 11：深拷贝与浅拷贝
+﻿# 第 2 周 · Day 11：深拷贝与浅拷贝
 
-> 对象赋值传的是**引用**。改副本却改到原对象——面试高频坑。今天要分清浅拷贝 / 深拷贝，并手写一个 `deepClone`。
+> 对象赋值传的是**引用**。改副本却改到原对象——经典高频坑。今天要分清浅拷贝 / 深拷贝，并手写一个 `deepClone`。
 
 ## 今日目标
 
-- [x] 说清赋值、浅拷贝、深拷贝三者区别（一句话）
-- [x] 知道 `Object.assign` / 展开运算只是浅拷贝
-- [x] 知道 `JSON.parse(JSON.stringify)` 的局限
-- [x] 完成 `js-lab/11-deep-shallow-copy/deepClone.js` 中 TODO
-- [x] 通过练习验证
-- [x] 填写本笔记底部复盘
+- ✅ 说清赋值、浅拷贝、深拷贝三者区别（一句话）
+- ✅ 知道 `Object.assign` / 展开运算只是浅拷贝
+- ✅ 知道 `JSON.parse(JSON.stringify)` 的局限
+- ✅ 完成 `js-lab/11-deep-shallow-copy/deepClone.js` 中 TODO
+- ✅ 通过练习验证
+- ✅ 填写本笔记底部复盘
 
 ## 实验位置
 
@@ -75,7 +75,7 @@ const clone = JSON.parse(JSON.stringify(obj));
 | `Map` / `Set` / `RegExp` | 变成 `{}` |
 | 循环引用 | 直接报错 |
 
-面试可以说：**简单数据用 JSON 够用；要稳就手写递归 / 用 structuredClone。**
+经典可以说：**简单数据用 JSON 够用；要稳就手写递归 / 用 structuredClone。**
 
 ---
 

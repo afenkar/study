@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第 12 周复盘 · Day 43 自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>第 12 周复盘 · 闭卷自测（10 题）</h1>
+  <p class="hint">覆盖 Day 40–42 HTTP。对照 <code>notes/week12-day43-week12-review.md</code>。</p>
+
+  <section>
+    <div class="q">
+      <label>1. 查列表数据用什么 Method？</label>
+      <select id="q1">
+        <option value="">请选择</option>
+        <option value="get">GET</option>
+        <option value="post">POST</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>2. token 过期后端常返回？</label>
+      <select id="q2">
+        <option value="">请选择</option>
+        <option value="401">401</option>
+        <option value="403">403</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>3. 登录了但无权访问管理页？</label>
+      <select id="q3">
+        <option value="">请选择</option>
+        <option value="403">403</option>
+        <option value="401">401</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>4. 端口不同算跨域吗？</label>
+      <select id="q4">
+        <option value="">请选择</option>
+        <option value="yes">算</option>
+        <option value="no">不算</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>5. 生产环境跨域主要靠？</label>
+      <select id="q5">
+        <option value="">请选择</option>
+        <option value="cors">后端 CORS 响应头</option>
+        <option value="front">前端关闭浏览器安全</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>6. 强缓存命中时浏览器会？</label>
+      <select id="q6">
+        <option value="">请选择</option>
+        <option value="local">max-age 内直接用本地，不问服务器</option>
+        <option value="304">先拿 304 再决定</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>7. 协商缓存资源未变，状态码？</label>
+      <select id="q7">
+        <option value="">请选择</option>
+        <option value="304">304</option>
+        <option value="200-cache">200 from disk cache</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>8. Token 请求通常放哪？</label>
+      <select id="q8">
+        <option value="">请选择</option>
+        <option value="auth">Authorization Header</option>
+        <option value="body">Request Body</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>9. Cookie Session 状态存在？</label>
+      <select id="q9">
+        <option value="">请选择</option>
+        <option value="server">服务器</option>
+        <option value="browser">仅浏览器</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>10. 前后端分离项目更常用？</label>
+      <select id="q10">
+        <option value="">请选择</option>
+        <option value="token">Token / JWT</option>
+        <option value="session">Cookie Session</option>
+      </select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="exercise.js"></script>
+</body>
+</html>
