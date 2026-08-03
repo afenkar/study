@@ -3,7 +3,7 @@
 > 创建日期：2026-07-02  
 > 预计周期：16 周（约 4 个月）  
 > 每日投入：3 小时  
-> 当前阶段：**第 3 阶段 · 工程化 + 浏览器 + 网络**（进行中）
+> 当前阶段：**第 4 阶段 · 求职冲刺**（项目面试化，Day 52 起）
 
 ---
 
@@ -28,12 +28,12 @@
 - [ ] **Vue 3**：理解响应式原理；熟练使用组合式 API、Router、Pinia；能设计组件与 composable
 - [ ] **工程化**：懂 Vite 构建、环境变量、打包产物；会用 ESLint、Git 分支协作
 - [ ] **浏览器与网络**：HTTP、缓存、跨域、Token 鉴权能口头说清楚
-- [ ] **项目**：GitHub 上有 **1 个能拿得出手的 Vue 3 后台模块**（含权限、CRUD、Pinia、composable）
+- [ ] **项目**：**40WEB（RT9800 网管）** 能在面试里讲 15 分钟（鉴权、Pinia、工程化）；**BUSINESS** 作全栈副项目
 - [ ] **面试**：能稳定回答 50+ 道常见 JS / Vue 面试题
 
 ### 求职产出物
 
-1. 重构后的 **Vue 3 管理后台代表作**（README 写清技术选型与亮点）
+1. **现有项目面试化**：40WEB 主项目 + BUSINESS 副项目（`interview/project-portfolio.md`）
 2. **个人知识库**（`notes/` 目录持续更新）
 3. **简历**突出：2 年经验 + 深度项目 + 原理能力
 
@@ -99,9 +99,9 @@
 | 第 9 周 | 组合式 API + composable 最佳实践 | 至少写 2 个可复用 composable |
 | 第 10 周 | 性能优化 + Vue DevTools 调试 | 知道 v-if/v-show、key、懒加载场景 |
 
-**阶段项目：** Vue 3 管理后台模块（求职代表作）  
-**目录：** `vue-admin/`  
-**必含功能：** 登录鉴权、表格 CRUD + 分页搜索、Pinia、composable、（建议）TypeScript
+**阶段项目：** 用 **40WEB** 作 Vue 3 代表作（已有：登录鉴权、Pinia、Router 守卫、Vite 工程化）  
+**目录：** 本机 `RT9800_NOOS\40WEB` · Study 内 `interview/project-portfolio.md`  
+**不再要求** 从零新建 `vue-admin/`
 
 **推荐资料：**
 
@@ -126,14 +126,21 @@
 
 ---
 
-### 第 4 阶段：求职冲刺（第 15–16 周）
+### 第 4 阶段：求职冲刺（第 15–16 周 · Day 52 起）
+
+| 天 | 任务 |
+|----|------|
+| Day 52 | **40WEB** 结构梳理 + 鉴权讲稿（`notes/week15-day52-project-40web.md`） |
+| Day 53 | **BUSINESS** 全栈讲稿 + JWT 流程 |
+| Day 54–55 | `interview/vue-p0` + `vue-p1`，**每题尽量用 40WEB 举例** |
+| Day 56+ | 简历定稿 + 模拟面试 + 投递 |
 
 | 任务 | 说明 |
 |------|------|
-| 简历 | 突出 2 年经验 + 深度 Vue 项目 + 原理能力 |
-| 面试题 | 过一遍 `interview/` 清单，每题能用自己的话说 |
-| 模拟面试 | 找老师（AI）或朋友模拟技术面 |
-| 投递 | 边投边补薄弱点，记录每家面试反馈 |
+| 项目档案 | `interview/project-portfolio.md` + `project-40web-faq.md` |
+| 面试题 | 原理题 + 项目追问，能指到具体文件 |
+| 模拟面试 | 发「模拟面试」让我按 40WEB 追问 |
+| 投递 | 边投边补薄弱点 |
 
 **React：** 拿到 offer 或入职后再启动，不占用这 16 周主线。
 
@@ -158,10 +165,19 @@ Study/
 │   ├── 05-browser-render/   ← Day 44：浏览器渲染
 │   ├── 06-web-vitals/       ← Day 45：FCP / LCP
 │   └── 07-week13-review/    ← Day 46：浏览器周复盘
-├── vue-admin/              ← 求职代表作（待创建）
-├── notes/                  ← 每日学习笔记
+├── git-lab/                ← Git 协作（第 14 周）
+│   ├── 01-git-basics/      ← Day 47：Git 入门
+│   └── 02-git-branch-conflict/ ← Day 48：分支与冲突
+├── eslint-lab/             ← ESLint（第 14 周）
+│   └── 01-eslint-basics/   ← Day 49：ESLint 入门
+├── mock-lab/               ← Mock 数据（第 14 周）
+│   ├── 01-mock-basics/     ← Day 50：Mock 入门
+│   └── 02-week14-review/   ← Day 51：工程化周复盘
+├── notes/                  ← 每日学习笔记（Day 52 起：项目面试化）
 │   └── week01-day01-scope-closure.md
-└── interview/              ← 面试题整理与自测（Vue 旁路已启动，第 4 阶段继续用）
+└── interview/              ← 面试题 + 项目档案
+    ├── project-portfolio.md   ← 40WEB / BUSINESS 定位与简历模板
+    └── project-40web-faq.md   ← 主项目追问清单
 ```
 
 ---
@@ -208,9 +224,9 @@ Study/
 |------|------|------|
 | 第 1 阶段 · JS 地基 | ✅ 已完成 | Day 19 总复盘 12/12 |
 | 第 2 阶段 · Vue 深度 | ✅ 已完成 | Day 36 总复盘 12/12 |
-| 第 3 阶段 · 工程化 | 🟡 进行中 | Day 46：第 13 周复盘 |
-| Vue 面试旁路（方案 B） | 🟡 进行中 | 巩固块 30–40 分钟/天 · 见 `interview/vue-schedule-14d.md` |
-| 第 4 阶段 · 求职冲刺 | ⚪ 未开始 | 预计第 15 周 |
+| 第 3 阶段 · 工程化 | ✅ 已完成 | Day 51 第 14 周复盘 |
+| 第 4 阶段 · 求职冲刺 | 🟡 进行中 | Day 52 · 40WEB 项目面试化 |
+| Vue 面试旁路（方案 B） | 🟡 进行中 | 与 Day 54+ 面试题合并推进 |
 
 ### 里程碑打卡
 
@@ -255,8 +271,14 @@ Study/
 - ✅ 第 12 周 HTTP 复盘（Day 43）
 - ✅ 浏览器渲染入门（Day 44）
 - ✅ Web 性能指标 FCP / LCP（Day 45）
+- ✅ 第 13 周浏览器与性能复盘（Day 46）
+- ✅ Git 协作入门（Day 47）
+- ✅ Git 分支与冲突（Day 48）
+- ✅ ESLint 入门（Day 49）
+- ✅ Mock 数据入门（Day 50）
+- ✅ 第 14 周工程化协作复盘（Day 51）
 - [ ] Vue 3 官方文档精读第一遍
-- [ ] 完成 `vue-admin` 求职代表作
+- [ ] 40WEB 项目面试化（15 分钟讲稿 + FAQ，`interview/project-portfolio.md`）
 - [ ] 过 50 道面试题（Vue 旁路：`interview/vue-p0` + `vue-p1` ≈ 60 题）
 - [ ] Vue 面试 14 日日程打卡完成（`interview/vue-schedule-14d.md`）
 - [ ] 更新简历并开始投递
@@ -278,6 +300,7 @@ Study/
 |------|------|
 | 2026-07-02 | 初版：基于 2 年经验、Vue 3 主攻、JS 基础补起、每日 3 小时 |
 | 2026-07-28 | 增加 Vue 面试旁路方案 B：`interview/vue-*`，与第 3 阶段并行 |
+| 2026-08-03 | Day 52 起：取消新建 vue-admin，改用 40WEB + BUSINESS 项目面试化 |
 
 ---
 

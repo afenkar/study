@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 48 · Git 分支与冲突自测</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { font-size: 1.25rem; }
+    section { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .diagram { background: #fafafa; padding: 1rem; border-radius: 8px; font-family: ui-monospace, monospace; font-size: 0.85rem; white-space: pre-wrap; }
+    .q { margin: 1rem 0; }
+    .q label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    select { width: 100%; max-width: 420px; padding: 0.35rem; min-height: 2.2rem; }
+    body:not(.quiz-ready) select { visibility: hidden; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .output { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+    .hint { color: #666; font-size: 0.9rem; }
+    code { background: #f0f0f0; padding: 0.1em 0.3em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Day 48 · Git 分支与冲突 · 闭卷自测（10 题）</h1>
+  <p class="hint">对照 <code>notes/week14-day48-git-branch-conflict.md</code>。Live Server 打开，勿看 <code>check.js</code>。</p>
+
+  <section>
+    <h2>冲突标记示意</h2>
+    <pre class="diagram">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+当前分支的内容
+=======
+要合并分支的内容
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feat/xxx</pre>
+  </section>
+
+  <section>
+    <div class="q">
+      <label>1. 冲突通常什么时候出现？</label>
+      <select id="q1"></select>
+    </div>
+
+    <div class="q">
+      <label>2. <<<<<<< HEAD 和 ======= 之间是？</label>
+      <select id="q2"></select>
+    </div>
+
+    <div class="q">
+      <label>3. 解决冲突第一步？</label>
+      <select id="q3"></select>
+    </div>
+
+    <div class="q">
+      <label>4. 改完冲突文件后？</label>
+      <select id="q4"></select>
+    </div>
+
+    <div class="q">
+      <label>5. git merge --abort 干什么？</label>
+      <select id="q5"></select>
+    </div>
+
+    <div class="q">
+      <label>6. git pull 报冲突说明？</label>
+      <select id="q6"></select>
+    </div>
+
+    <div class="q">
+      <label>7. PR 上有冲突，一般怎么处理？</label>
+      <select id="q7"></select>
+    </div>
+
+    <div class="q">
+      <label>8. 冲突未解决时能 push 吗？</label>
+      <select id="q8"></select>
+    </div>
+
+    <div class="q">
+      <label>9. merge 和 rebase 共同点？</label>
+      <select id="q9"></select>
+    </div>
+
+    <div class="q">
+      <label>10. 减少冲突的好做法？</label>
+      <select id="q10"></select>
+    </div>
+
+    <button id="btn-check">验证答案</button>
+    <p class="output" id="out"></p>
+  </section>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
