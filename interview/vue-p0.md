@@ -10,7 +10,16 @@
 ## A. Vue2 vs Vue3（Day 1）
 
 ### P0-01 ⚠️ Vue3 相对 Vue2 的核心优势？
-- [ ]
+- [ 
+  Vue3最核心的变革就是组合式API，vue2的选项式API将一个功能的逻辑分散在data、methods、computed等这些不同选项中，组件功能复杂篇幅较长的时候，修改一个功能就要反复跳转，维护很麻烦。组合式API可以将同一个功能相关的代码写在一起，并且可以将这些逻辑轻松用成可复用的函数，极大提升大型项目的维护性和逻辑复用性。
+性能相比vue2，vue3有一个极大的提升。
+poxy懒代理替代原来object.defineProperty,解决vue2不能检测对象属性新增/删除、数组索引修改这些问题；初始化也变得更快，因为不用一开始就遍历所有数据。
+vue3的虚拟DOM加入“静态标记”和“区块树”优化技术。编译时能标记哪些节点是动态的，更新的时候只对比变化的部分，渲染效率提升30%以上。
+按需引用tree-shaking，项目里面写了但是没用上就不会打包进最终文件。
+vue3本身就是用TS重写的，对TS的支持是天然和完整的。
+多根节点Fragment,避免为了满足模板要求而添加的无意义div包装。
+传送门Teleport，可以将组件的一部分模板传送到DOM中任意位置渲染。
+]
 
 **标准答要点：**
 1. 响应式：Proxy（可监听增删属性、数组下标）  
@@ -26,15 +35,41 @@
 ---
 
 ### P0-02 ✅ Composition API 比 Options 好在哪？何时仍可用 Options？
-- [ ]
+- [
+  同一业务逻辑的代码物理聚合，不再分散到data/methods/watch中；
+显示函数调用，来源清晰，没有命名冲突，支持嵌套组合；
+TS友好；
+按需导入，没有使用的composable不会打包；
+Options适用场景小叶组件：展示型、无状态、逻辑简单的组件更直观；
+渐进迁移：vue2->vue3迁移时，新旧语法可以共存。
+
+useRequest:统一处理接口加载状态，自动管理请求取消。
+vue2官方表示不会废弃，vue核心就是渐进式，option在小型项目还是挺不错的。
+总的来说 中大型项目、逻辑复用场景、TS项目->优先Composition API.
+ ]
 
 **要点：** 按功能组织；composable 复用无命名冲突；TS 友好；Tree-shaking。  
 小叶组件、逻辑极简单 → Options 完全可接受，可共存渐进迁移。
 
+
 ---
 
 ### P0-03 🆕 Vue2 哪些常见 API 在 Vue3 没了 / 换了？
-- [ ]
+- [ 
+  一、彻底删除的
+$on、$off、$once——事件总线eventbus没了
+迁移方案：
+小型项目：mitt或者tiny-emitter第三方库替代；大型项目：pinia/vuex状态管理或者provide/inject。
+$children——直接访问子组件实例
+迁移方案：
+明确父子关系：使用 ref 获取单个子组件实例
+需要访问多个子组件：在子组件中用 provide 注册自己，父组件用 inject 收集
+$listeners——合并到$attrs
+Vue2 中 $attrs 存的是未声明为 props 的属性，$listeners 存的是所有事件监听器（如 @click）。
+Vue3 中 $listeners 被移除，所有额外的事件监听器合并到 $attrs 中，且 $attrs 会保留传递的事件（如 onClick、onFocus）。
+$scopedSlots——统一为$slots
+
+]
 
 **要点：**  
 - `$on` / `$off` / `$once` 移除 → mitt / Pinia / provide  
@@ -42,6 +77,8 @@
 - `.sync` 移除 → `v-model:xxx`  
 - `$listeners` 并入 `$attrs`  
 - `beforeDestroy` → `beforeUnmount`；`destroyed` → `unmounted`
+
+
 
 ---
 
