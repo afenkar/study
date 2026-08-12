@@ -39,9 +39,9 @@ function debounce(fn, delay) {
 3. 箭头函数是 `=>`，逗号用英文 `,`
 
 **口述场景：** 搜索框输入、resize 结束再算布局。  
-- [ ]
+- ✅ （2026-08-12 闭卷默写过关）
 
-**我的坑：**
+**我的坑：** mock 曾写挂 `apply`/`clearTimeout` 顺序，现已纠正。
 
 ---
 
@@ -69,7 +69,7 @@ function throttle(fn, wait) {
 | 行为 | 停了才触发 | 固定节奏触发 |
 | 场景 | 搜索、提交防连点 | 滚动、拖拽、按钮限频 |
 
-- [ ]
+- ✅ （2026-08-12 闭卷默写过关）
 
 **我的坑：**
 
@@ -288,8 +288,8 @@ function flatten(arr) {
 
 | 题 | 闭卷写出 | 能讲场景 |
 |----|----------|----------|
-| debounce | ☐ | ☐ |
-| throttle | ☐ | ☐ |
+| debounce | ✅ | ☐ |
+| throttle | ✅ | ☐ |
 | deepClone | ☐ | ☐ |
 | myNew | ☐ | ☐ |
 | myBind | ☐ | ☐ |
