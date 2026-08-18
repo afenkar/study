@@ -19,6 +19,7 @@
 | [`project-40web-faq.md`](./project-40web-faq.md) | 40WEB 追问与标准答 |
 | [`project-portfolio.md`](./project-portfolio.md) | 项目档案（背景） |
 | [`js-mock-01.md`](./js-mock-01.md) | 模拟面 · 滚错题用 |
+| [`ai-faq.md`](./ai-faq.md) | AI 相关口述（嵌在 daily-plan 指定日） |
 | [`vue-schedule-14d.md`](./vue-schedule-14d.md) | 旧 Vue 日程存档（题号参考；打卡用 daily-plan） |
 
 ## 每日用法
