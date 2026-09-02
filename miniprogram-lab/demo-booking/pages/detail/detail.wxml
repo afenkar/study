@@ -1,0 +1,13 @@
+<view class="container" wx:if="{{booth}}">
+  <view class="panel">
+    <view class="tag">{{booth.tag}}</view>
+    <view class="name">{{booth.name}}</view>
+    <view class="muted seats">剩余名额 {{booth.seats}}</view>
+    <view class="desc">{{booth.desc}}</view>
+  </view>
+
+  <button class="btn-primary" bindtap="goSubmit">预约此摊位</button>
+  <button bindtap="goBack">返回列表</button>
+</view>
+
+<view class="container muted" wx:else>未找到摊位</view>

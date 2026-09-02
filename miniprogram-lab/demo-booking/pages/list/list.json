@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "booth-card": "/components/booth-card/booth-card"
+  },
+  "navigationBarTitleText": "摊位列表"
+}

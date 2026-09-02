@@ -11,10 +11,13 @@
 |--------|------|----------|--------|----------|
 | ⭐ 主 | RT9800 单机 Web 网管 | `01MAC\RT9800_NOOS\40WEB` | Vue 3.5 + Vite + Pinia + Ant Design Vue + ESLint + i18n | **Vue 3 代表作** |
 | ⭐ 副 | 公司官网（前后端） | `04GUI\xiongy\BUSINESS` | vue3 + Spring Boot + JWT | **全栈从 0 到 1** |
+| 📱 补 | **H5 落地页 demo** | `Study/h5-lab/01-landing` | rem + flex/grid、表单/弹层、懒加载 | **H5/移动向证据** |
+| 📱 补 | **微信小程序 demo** | `Study/miniprogram-lab/demo-booking` | 列表→详情→提交、自定义组件 | **小程序向证据** |
 | 亮点 | 远程网管 / 地图可视化 | `04GUI\xiongy\RE_base` | Vue 3 + Vite + Pinia + **AntV L7** + i18n | **图表 / GIS 加分项** |
 | 补充 | 旧版网管维护 | `04GUI\30_WEB` | Vue 2 + Vuex + Element UI | 遗留项目维护经验 |
 
-**不再新建 `Study/vue-admin`**——用现有项目深挖 + 面试化。
+**不再新建 `Study/vue-admin`**——用现有项目深挖 + 面试化。  
+**移动向：** 双 demo 放入后补评审与简历话术（见 `ROADMAP.md` 第 4B）。
 
 ---
 
@@ -152,6 +155,8 @@ BUSINESS/
 
 - [ ] 40WEB 能讲满 **15 分钟**（背景→架构→鉴权→1 个业务模块→难点）
 - [ ] BUSINESS 能讲 **5–8 分钟**（全栈分工 + JWT 流程）
+- [ ] H5 demo 能讲 **3–5 分钟**（适配方案 + 兼容坑 + 一处优化）
+- [ ] 小程序 demo 能讲 **5–8 分钟**（页面流 + 组件 + setData/性能）
 - [ ] 每个技术点能指到**具体文件/函数**
 - [ ] `interview/project-40web-faq.md` 高频题过一遍
-- [ ] 简历已更新，30_WEB 不抢主项目戏份
+- [ ] 简历已更新，30_WEB 不抢主项目戏份；移动向条目在双 demo 就绪后写入

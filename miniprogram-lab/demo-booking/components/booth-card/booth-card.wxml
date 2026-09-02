@@ -1,0 +1,7 @@
+<view class="card" bindtap="onTap">
+  <view class="card__main">
+    <view class="card__name">{{item.name}}</view>
+    <view class="muted">剩余 {{item.seats}} 席</view>
+  </view>
+  <view class="card__tag">{{item.tag}}</view>
+</view>

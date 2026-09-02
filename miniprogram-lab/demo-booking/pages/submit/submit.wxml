@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="panel">
+    <view class="label muted">预约摊位</view>
+    <view class="value">{{boothName}}</view>
+  </view>
+
+  <view class="field">
+    <view class="label">联系人</view>
+    <input
+      class="input"
+      placeholder="怎么称呼你"
+      value="{{name}}"
+      bindinput="onName"
+      maxlength="20"
+    />
+  </view>
+
+  <view class="field">
+    <view class="label">手机号</view>
+    <input
+      class="input"
+      type="number"
+      placeholder="11 位手机号"
+      value="{{phone}}"
+      bindinput="onPhone"
+      maxlength="11"
+    />
+  </view>
+
+  <!-- 注意：每键入就 setData 小字段可以；大表单可防抖后写 -->
+  <button
+    class="btn-primary"
+    loading="{{submitting}}"
+    disabled="{{submitting}}"
+    bindtap="onSubmit"
+  >
+    提交预约
+  </button>
+</view>

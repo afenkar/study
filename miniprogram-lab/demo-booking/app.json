@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/submit/submit"
+  ],
+  "window": {
+    "navigationBarTitleText": "市集预约",
+    "navigationBarBackgroundColor": "#1c1914",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f3efe6",
+    "backgroundTextStyle": "dark"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

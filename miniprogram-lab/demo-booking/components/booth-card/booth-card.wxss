@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fffdf8;
+  border: 1px solid #e4dccf;
+  border-radius: 20rpx;
+  padding: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.card__name {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 8rpx;
+}
+
+.card__tag {
+  font-size: 22rpx;
+  color: #c45c26;
+  background: rgba(196, 92, 38, 0.12);
+  padding: 6rpx 16rpx;
+  border-radius: 999rpx;
+  flex-shrink: 0;
+}

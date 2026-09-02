@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="hd">
+    <text class="hd__title">本周末可预约摊位</text>
+    <text class="muted">点卡片进详情 → 再提交预约</text>
+  </view>
+
+  <block wx:for="{{list}}" wx:key="id">
+    <booth-card
+      item="{{item}}"
+      bind:tapcard="onTapCard"
+    />
+  </block>
+
+  <view wx:if="{{!list.length}}" class="empty muted">暂无摊位</view>
+</view>

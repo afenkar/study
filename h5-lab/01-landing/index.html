@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- viewport-fit=cover：配合安全区 env() -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <title>周末市集报名 · H5 Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <p class="hero__eyebrow">H5 Lab · Demo1</p>
+      <h1 class="hero__title">周末市集报名</h1>
+      <p class="hero__desc">适配练习：rem + flex/grid · 表单 · 弹层 · 懒加载</p>
+    </header>
+
+    <main class="page">
+      <!-- Grid：活动亮点宫格 -->
+      <section class="section" aria-labelledby="highlights-title">
+        <h2 id="highlights-title" class="section__title">活动亮点</h2>
+        <ul class="grid-cards">
+          <li class="card">手作工坊</li>
+          <li class="card">本地美食</li>
+          <li class="card">音乐快闪</li>
+          <li class="card">亲子互动</li>
+        </ul>
+      </section>
+
+      <!-- 列表 + 懒加载图 -->
+      <section class="section" aria-labelledby="booths-title">
+        <h2 id="booths-title" class="section__title">摊位一览</h2>
+        <ul class="booth-list" id="booth-list">
+          <!-- JS 渲染 -->
+        </ul>
+      </section>
+
+      <!-- 表单 -->
+      <section class="section" aria-labelledby="form-title">
+        <h2 id="form-title" class="section__title">报名信息</h2>
+        <form class="form" id="signup-form" novalidate>
+          <label class="field">
+            <span>昵称</span>
+            <input name="name" type="text" placeholder="怎么称呼你" required maxlength="20" />
+          </label>
+          <label class="field">
+            <span>手机号</span>
+            <input name="phone" type="tel" inputmode="numeric" placeholder="11 位手机号" required />
+          </label>
+          <label class="field">
+            <span>意向摊位</span>
+            <select name="booth" required>
+              <option value="">请选择</option>
+              <option value="craft">手作</option>
+              <option value="food">美食</option>
+              <option value="music">音乐</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn--primary">提交报名</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- 底部安全区 CTA -->
+    <div class="bottom-bar">
+      <button type="button" class="btn btn--ghost" id="btn-rule">活动规则</button>
+      <button type="button" class="btn btn--primary" id="btn-scroll-form">去报名</button>
+    </div>
+
+    <!-- 弹层：注意滚动锁 + 点击穿透 -->
+    <div class="modal" id="modal" hidden>
+      <div class="modal__mask" data-close="1"></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <h3 id="modal-title">活动规则</h3>
+        <p>1. 每人限报 1 个摊位类型。</p>
+        <p>2. 现场凭短信核销。</p>
+        <p>3. 本页为学习 Demo，数据仅存本地。</p>
+        <button type="button" class="btn btn--primary" id="btn-close-modal">我知道了</button>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" hidden></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

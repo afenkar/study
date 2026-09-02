@@ -1,0 +1,9 @@
+{
+  "desc": "Study demo sitemap",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

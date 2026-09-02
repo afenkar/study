@@ -1,0 +1,31 @@
+.panel {
+  background: #fffdf8;
+  border-radius: 24rpx;
+  padding: 32rpx;
+  border: 1px solid #e4dccf;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 22rpx;
+  color: #c45c26;
+  background: rgba(196, 92, 38, 0.12);
+  padding: 4rpx 16rpx;
+  border-radius: 999rpx;
+}
+
+.name {
+  margin-top: 16rpx;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.seats {
+  margin-top: 12rpx;
+}
+
+.desc {
+  margin-top: 24rpx;
+  font-size: 28rpx;
+  line-height: 1.6;
+}

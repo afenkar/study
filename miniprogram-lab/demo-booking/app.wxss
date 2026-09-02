@@ -1,0 +1,29 @@
+/**app.wxss · 全局基础样式**/
+page {
+  background: #f3efe6;
+  color: #1c1914;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+
+/* rpx：小程序推荐单位，750 设计稿宽下 750rpx = 屏宽 */
+.container {
+  padding: 24rpx 32rpx 48rpx;
+}
+
+.btn-primary {
+  margin-top: 24rpx;
+  background: #c45c26;
+  color: #fff;
+  border-radius: 999rpx;
+  font-size: 30rpx;
+}
+
+.btn-primary[disabled] {
+  opacity: 0.5;
+}
+
+.muted {
+  color: #6b6358;
+  font-size: 24rpx;
+}
