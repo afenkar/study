@@ -1,9 +1,9 @@
 ﻿# 前端中级提升 · 总体目标与路线图
 
 > 创建日期：2026-07-02  
-> 预计周期：16 周（约 4 个月）+ H5/小程序冲刺  
+> 预计周期：16 周（约 4 个月）+ 求职补齐  
 > 每日投入：3 小时  
-> 当前阶段：**第 4 阶段 · 求职冲刺**（40WEB 面试化 + **H5/小程序 15 日补齐**）
+> 当前阶段：**第 4 阶段 · 求职冲刺**（**全栈 12 日优先** + 40WEB 面试化；H5/小程序降为加分）
 
 ---
 
@@ -15,9 +15,9 @@
 | 技术栈 | Vue 3 为主，少量 Vue 2 维护旧项目 |
 | 基础水平 | HTML / CSS / JS / Vue 都能用，**原理已系统补过**（JS/Vue/工程化完成） |
 | 学习方式 | 除大学外无系统学习，用时才查文档 → 正用 Study 仓库纠正 |
-| 主攻方向 | **Vue 3** + 求职期补 **H5 / 微信小程序**（投移动向岗位用） |
-| 已知缺口 | 工作偏后台；**缺可演示的 H5 适配 + 小程序项目** |
-| 最终目标 | **换工作**，合格中级 Vue 前端；能投 H5/小程序向 JD |
+| 主攻方向 | **Vue 3**；求职主投 **偏前端全栈（Vue + Spring Boot）**；H5/小程序作加分 |
+| 已知缺口 | 全栈：MySQL 联表/索引、Maven、Linux、部署口述；移动向：H5/小程序 demo 已有脚手架 |
+| 最终目标 | **换工作**：合格中级 Vue + 能讲清 BUSINESS 全栈闭环 |
 
 ---
 
@@ -29,23 +29,25 @@
 - [ ] **Vue 3**：理解响应式原理；熟练使用组合式 API、Router、Pinia；能设计组件与 composable
 - [ ] **工程化**：懂 Vite 构建、环境变量、打包产物；会用 ESLint、Git 分支协作
 - [ ] **浏览器与网络**：HTTP、缓存、跨域、Token 鉴权能口头说清楚；XSS/CSRF 各能讲 30 秒
-- [ ] **移动向（求职补齐）**：H5 适配（rem/vw、flex/grid、兼容坑）+ 微信小程序（组件/API/`setData`/性能）各有可演示 demo
-- [ ] **项目**：**40WEB** 讲 15 分钟；**BUSINESS** 作副项目；**H5 demo + 小程序 demo** 作移动向证据
-- [ ] **面试**：能稳定回答 50+ 道常见 JS / Vue 面试题
+- [ ] **全栈（求职主补）**：BUSINESS 能讲 8 分钟；MySQL 联表 + 简单索引；Maven 打包 + Linux/部署口述
+- [ ] **移动向（加分）**：H5 适配 + 微信小程序各有可演示 demo（已有脚手架）
+- [ ] **项目**：**投全栈岗 → BUSINESS 提到第一位**；**40WEB** 证明前端深度；H5/小程序按需写
+- [ ] **面试**：能稳定回答 50+ 道常见 JS / Vue 面试题；全栈追问不装成 3 年后端
 
 ### 求职产出物
 
-1. **现有项目面试化**：40WEB 主项目 + BUSINESS 副项目（`interview/project-portfolio.md`）
-2. **移动向双 demo**（待你放入仓库后一起评审）：H5 落地页 + 微信小程序业务流
-3. **个人知识库**（`notes/` 目录持续更新）
-4. **简历**突出：2 年经验 + Vue 深度项目 + H5/小程序可演示物
+1. **现有项目面试化**：40WEB + BUSINESS（`interview/project-portfolio.md`）
+2. **全栈补齐**：`fullstack-lab/` 笔记 + BUSINESS 讲稿 + SQL 练习
+3. **移动向双 demo**（加分）：`h5-lab/01-landing` + `miniprogram-lab/demo-booking`
+4. **简历**：2 年前端 + 独立 Vue3/Spring Boot 闭环；**不要写成「3 年全栈」**
 
 ### 刻意不做（防止分散）
 
 - ❌ 现阶段不主攻 React（入职后再学）
-- ❌ 不追新框架 / 不刷短视频式碎片化教程（uni-app 仅作加分摸底，主线仍是原生小程序）
+- ❌ 不追新框架 / 不刷短视频式碎片化教程
 - ❌ 不只看不做——**每天都要写代码**
-- ❌ 小程序/H5 demo 未完成前，不海投「H5/小程序主责」类 JD
+- ❌ 全栈 12 日未完成前，不要把每天主时间砸在小程序上
+- ❌ 小程序/H5 demo 未口述前，不海投「H5/小程序主责」类 JD
 
 ---
 
@@ -59,7 +61,15 @@
 | 输出 | 手写代码、实验、项目 | 60–90 分钟 |
 | 巩固 | 面试题自测 + 复盘笔记 | 30–45 分钟 |
 
-### 第 4 阶段 · H5/小程序冲刺期（优先用这张）
+### 第 4 阶段 · 全栈冲刺期（当前优先用这张）
+
+| 模块 | 内容 | 时长 |
+|------|------|------|
+| 全栈专项 | BUSINESS 对照代码 / SQL / 部署笔记 | 90–120 分钟 |
+| 面试巩固 | 40WEB 或 JS·Vue 题（可压缩） | 45–60 分钟 |
+| 复盘 | 笔记 3～5 条「能讲给面试官」 | 20–30 分钟 |
+
+### 第 4 阶段 · H5/小程序（全栈 12 日完成后再加码）
 
 | 模块 | 内容 | 时长 |
 |------|------|------|
@@ -149,43 +159,62 @@
 | Day 52 | **40WEB** 结构梳理 + 鉴权讲稿（`notes/week15-day52-project-40web.md`） |
 | Day 53 | **BUSINESS** 全栈讲稿 + JWT 流程 |
 | Day 54–55 | `interview/vue-p0` + `vue-p1`，**每题尽量用 40WEB 举例** |
-| Day 56+ | 简历定稿 + 模拟面试 + 投递（H5/小程序岗等双 demo 就绪后再主投） |
+| Day 56+ | 简历定稿 + 模拟面试 + 投递（**全栈岗可先投**；H5/小程序岗等口述就绪） |
 
 | 任务 | 说明 |
 |------|------|
 | 项目档案 | `interview/project-portfolio.md` + `project-40web-faq.md` |
 | 面试题 | 原理题 + 项目追问，能指到具体文件 |
-| 模拟面试 | 发「模拟面试」让我按 40WEB 追问 |
-| 投递 | Vue 后台向可先投；**H5/小程序向等双 demo** |
+| 模拟面试 | 发「模拟面试」让我按 40WEB 或 BUSINESS 追问 |
+| 投递 | **偏前端全栈岗主投**；Vue 纯前端岗可并行；H5/小程序向等口述 |
 
-#### B. H5 + 微信小程序 · 15 日补齐（2026-09-02 起）
+#### C. 偏前端全栈 · 12 日补齐（2026-09-03 起 · **当前最高优先级**）
 
-> **为什么加？** 目标 JD 主责是小程序 + H5 适配；你已有 Vue/JS/Vite/HTTP，缺口是**可演示的移动端交付物**。  
-> **两个 demo**：你完成后放进仓库（或发路径），一起做代码评审 + 面试话术。
+> **为什么加？** 全栈 JD（Vue + Java + MySQL + Git/Maven/Linux）与 BUSINESS 最匹配；年限写 3 年可投但话术诚实。  
+> **缺口：** SQL 联表/索引、Maven、Linux、部署；BUSINESS 要能指到具体类。  
+> **代码仍在本机** `04GUI\xiongy\BUSINESS`；Study 只放脱敏笔记：`fullstack-lab/`。
 
 | 日 | 主题 | 验收标准 |
 |----|------|----------|
-| D1–2 | H5 适配体系 | 说清 rem vs vw；flex/grid 各写一屏布局 |
-| D3–4 | 移动兼容坑 | 安全区、`100vh`、点击穿透、微信内置浏览器至少踩过并记下对策 |
-| D5–7 | **Demo1 · H5 落地页** | 多机宽（375/414）可看；表单+列表+弹层；懒加载或首屏优化任选 1 |
-| D8–10 | 小程序基础 | 生命周期、自定义组件、路由、`wx.request`、登录流程口述 |
-| D11–13 | **Demo2 · 小程序业务流** | 列表→详情→提交（可 mock）；能讲 `setData` 注意点 / 分包或为何暂不分包 |
-| D14 | Web 安全口述 | XSS、CSRF、Token 存放、HTTPS 各约 30 秒 |
-| D15 | 包装投递 | 简历加移动向条目；`project-portfolio` 写入双 demo；开始投 H5/小程序岗 |
+| C1–2 | BUSINESS 分层 | 能画：页面 → axios → Controller → Service → Mapper → 表 |
+| C3–4 | JWT + 联调 | 登录发 token、过滤器、前端存放、401；开发期代理 vs 线上跨域各一句 |
+| C5–6 | MySQL 基础 + JOIN | `fullstack-lab/sql-practice.md` 至少 5 条能手写、能解释 |
+| C7–8 | 索引与 EXPLAIN | 主键/普通索引场景；「慢查询先看 EXPLAIN」能说 30 秒 |
+| C9–10 | Maven + 打包 | 说清 `pom`、`mvn package`、产出 jar |
+| C11 | Linux + 部署口述 | `java -jar`、看日志、Nginx 反代静态资源；最好真做一次 |
+| C12 | 包装投递 | 简历：**投全栈时 BUSINESS 第一**；自称「2 年前端 + 独立全栈项目」 |
 
-**Demo 存放约定（你放入后告诉我路径即可）：**
+**笔记目录：**
 
 ```
-Study/
-├── h5-lab/                 ← Demo1：移动 H5（待你添加）
-└── miniprogram-lab/        ← Demo2：微信小程序（待你添加）
+Study/fullstack-lab/
+├── README.md
+├── notes-core.md      ← 先看：JWT / SQL / Maven / 部署口述
+└── sql-practice.md    ← 联表练习（对照 BUSINESS 表名脱敏填写）
 ```
 
 **资料优先：**
 
-- 微信小程序官方文档（指南 + 框架 + API）
-- MDN：viewport / flex / 相对单位
-- 安全：OWASP 入门级 XSS/CSRF 即可，不深挖
+- 自己的 `springb/`：Jwt 过滤器、某一个 CRUD Controller
+- MySQL：JOIN、索引、EXPLAIN（官方文档或《SQL 必知必会》选读）
+- Maven / 部署：官方 Getting Started + 一次本机/服务器打 jar
+
+#### B. H5 + 微信小程序 · 15 日补齐（加分，全栈 12 日让路）
+
+> **定位：** 投移动向 JD 用；全栈主投期间每天最多挤 30 分钟复习 demo，不新开大功能。  
+> Demo 已在：`h5-lab/01-landing`、`miniprogram-lab/demo-booking`。
+
+| 日 | 主题 | 验收标准 |
+|----|------|----------|
+| D1–2 | H5 适配体系 | 说清 rem vs vw；flex/grid 各写一屏布局 |
+| D3–4 | 移动兼容坑 | 安全区、`100vh`、点击穿透、微信内置浏览器 |
+| D5–7 | **Demo1 · H5 落地页** | 已有：`h5-lab/01-landing`；375/414 跑通 + 口述 |
+| D8–10 | 小程序基础 | 生命周期、组件、`setData`、登录口述 |
+| D11–13 | **Demo2 · 小程序业务流** | 已有：`miniprogram-lab/demo-booking` |
+| D14 | Web 安全口述 | XSS、CSRF、Token、HTTPS |
+| D15 | 包装 | 仅投 H5/小程序岗时写入简历 |
+
+**资料优先：** `h5-lab/notes-core.md`、`miniprogram-lab/notes-core.md`
 
 **React：** 拿到 offer 或入职后再启动，不占用主线。
 
@@ -218,16 +247,19 @@ Study/
 ├── mock-lab/               ← Mock 数据（第 14 周）
 │   ├── 01-mock-basics/     ← Day 50：Mock 入门
 │   └── 02-week14-review/   ← Day 51：工程化周复盘
-├── h5-lab/                 ← 第 4 阶段：H5 核心笔记 + 落地页 demo
+├── fullstack-lab/          ← 第 4C：全栈笔记（对照本机 BUSINESS）
+│   ├── notes-core.md
+│   └── sql-practice.md
+├── h5-lab/                 ← 第 4B：H5 核心笔记 + 落地页 demo
 │   ├── notes-core.md
 │   └── 01-landing/
-├── miniprogram-lab/        ← 第 4 阶段：小程序核心笔记 + 预约 demo
+├── miniprogram-lab/        ← 第 4B：小程序核心笔记 + 预约 demo
 │   ├── notes-core.md
 │   └── demo-booking/
 ├── notes/                  ← 每日学习笔记（Day 52 起：项目面试化）
 │   └── week01-day01-scope-closure.md
 └── interview/              ← 面试题 + 项目档案
-    ├── project-portfolio.md   ← 40WEB / BUSINESS / 双 demo 定位与简历模板
+    ├── project-portfolio.md   ← 40WEB / BUSINESS（全栈岗第一）/ 双 demo
     └── project-40web-faq.md   ← 主项目追问清单
 ```
 
@@ -276,8 +308,9 @@ Study/
 | 第 1 阶段 · JS 地基 | ✅ 已完成 | Day 19 总复盘 12/12 |
 | 第 2 阶段 · Vue 深度 | ✅ 已完成 | Day 36 总复盘 12/12 |
 | 第 3 阶段 · 工程化 | ✅ 已完成 | Day 51 第 14 周复盘 |
-| 第 4 阶段 · 求职冲刺 | 🟡 进行中 | 40WEB 面试化 + H5/小程序 15 日 |
-| 第 4B · H5 + 小程序 | 🟡 进行中 | Demo 已脚手架：`h5-lab/01-landing` + `miniprogram-lab/demo-booking` |
+| 第 4 阶段 · 求职冲刺 | 🟡 进行中 | 全栈 12 日优先 + 40WEB 面试化 |
+| 第 4C · 偏前端全栈 | 🟡 待启动 | `fullstack-lab/` + BUSINESS 讲稿 |
+| 第 4B · H5 + 小程序 | 🟡 让路中 | Demo 已有；全栈完成后再加码 |
 | Vue 面试旁路（方案 B） | 🟡 进行中 | 与 Day 54+ 面试题合并推进 |
 
 ### 里程碑打卡
@@ -329,14 +362,17 @@ Study/
 - ✅ ESLint 入门（Day 49）
 - ✅ Mock 数据入门（Day 50）
 - ✅ 第 14 周工程化协作复盘（Day 51）
+- [ ] **BUSINESS 全栈讲稿**（8 分钟 + JWT 流程图，`fullstack-lab/notes-core.md`）
+- [ ] **MySQL**：`fullstack-lab/sql-practice.md` 5 条 JOIN + 索引口述
+- [ ] **Maven + Linux 部署**口述（最好打一次 jar）
 - [ ] Vue 3 官方文档精读第一遍
 - [ ] 40WEB 项目面试化（15 分钟讲稿 + FAQ，`interview/project-portfolio.md`）
 - [ ] 过 50 道面试题（Vue 旁路：`interview/vue-p0` + `vue-p1` ≈ 60 题）
 - [ ] Vue 面试 14 日日程打卡完成（`interview/vue-schedule-14d.md`）
-- [ ] **H5 demo** 本地跑通并对照 `h5-lab/notes-core.md` 能口述（`h5-lab/01-landing`）
-- [ ] **小程序 demo** 开发者工具导入跑通并口述（`miniprogram-lab/demo-booking`）
+- [ ] **H5 demo** 本地跑通并对照 `h5-lab/notes-core.md` 能口述
+- [ ] **小程序 demo** 开发者工具导入跑通并口述
 - [ ] 安全口述（XSS/CSRF/Token/HTTPS）过一遍
-- [ ] 更新简历（含移动向）并开始投递 H5/小程序岗
+- [ ] 更新简历：全栈岗 BUSINESS 第一；开始主投偏前端全栈 JD
 
 ---
 
@@ -347,6 +383,7 @@ Study/
 3. **想放弃/想换方向** → 重读「二、终极目标」，只看下一小步，不要想 16 周
 4. **工作中遇到 Vue 2 老代码** → 当作练手，对照 Vue 3 文档理解差异
 5. **H5/小程序 demo 做完了** → 把路径发过来，做代码评审 + 面试讲稿，再改 `project-portfolio.md`
+6. **全栈卡住** → 打开 `fullstack-lab/notes-core.md`，对照 BUSINESS 源码填空，不要另起一套后端
 
 ---
 
@@ -359,10 +396,11 @@ Study/
 | 2026-08-03 | Day 52 起：取消新建 vue-admin，改用 40WEB + BUSINESS 项目面试化 |
 | 2026-09-02 | 第 4 阶段增加 **H5 + 微信小程序 15 日补齐** |
 | 2026-09-02 | 落地双 demo + 核心笔记：`h5-lab/`、`miniprogram-lab/` |
+| 2026-09-03 | 第 4C：**偏前端全栈 12 日**（当前最高优先级）；H5/小程序让路 |
 
 ---
 
 **迷路时只看三行：**
 
-> 主攻 Vue 3 · 补齐 H5/小程序 demo · 换工作  
-> 今天 3 小时 · 移动专项 + 面试巩固 · 双 demo 就绪再海投移动岗
+> 主投偏前端全栈 · BUSINESS 讲透 · 40WEB 证深度  
+> 今天 3 小时 · SQL/JWT/部署 · H5 加分不抢主线

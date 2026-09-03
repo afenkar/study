@@ -1,7 +1,8 @@
 # 项目档案 
 
 > 代码在 `Z:\RTC\...`，Study 仓库只放**脱敏后的面试话术与结构**。  
-> 主项目：**40WEB（RT9800 网管）** · 副项目：**BUSINESS（官网全栈）**
+> **投全栈岗：** BUSINESS 提到第一位。**投纯前端：** 40WEB 第一。  
+> 全栈笔记：`fullstack-lab/notes-core.md`
 
 ---
 
@@ -9,15 +10,15 @@
 
 | 优先级 | 项目 | 本地路径 | 技术栈 | 简历角色 |
 |--------|------|----------|--------|----------|
-| ⭐ 主 | RT9800 单机 Web 网管 | `01MAC\RT9800_NOOS\40WEB` | Vue 3.5 + Vite + Pinia + Ant Design Vue + ESLint + i18n | **Vue 3 代表作** |
-| ⭐ 副 | 公司官网（前后端） | `04GUI\xiongy\BUSINESS` | vue3 + Spring Boot + JWT | **全栈从 0 到 1** |
-| 📱 补 | **H5 落地页 demo** | `Study/h5-lab/01-landing` | rem + flex/grid、表单/弹层、懒加载 | **H5/移动向证据** |
-| 📱 补 | **微信小程序 demo** | `Study/miniprogram-lab/demo-booking` | 列表→详情→提交、自定义组件 | **小程序向证据** |
-| 亮点 | 远程网管 / 地图可视化 | `04GUI\xiongy\RE_base` | Vue 3 + Vite + Pinia + **AntV L7** + i18n | **图表 / GIS 加分项** |
-| 补充 | 旧版网管维护 | `04GUI\30_WEB` | Vue 2 + Vuex + Element UI | 遗留项目维护经验 |
+| ⭐ 全栈主 / 前端副 | 公司官网（前后端） | `04GUI\xiongy\BUSINESS` | vue3 + Spring Boot + JWT | **全栈从 0 到 1** |
+| ⭐ 前端主 / 全栈副 | RT9800 单机 Web 网管 | `01MAC\RT9800_NOOS\40WEB` | Vue 3.5 + Vite + Pinia + Ant Design Vue + ESLint + i18n | **Vue 3 深度** |
+| 📱 加分 | **H5 落地页 demo** | `Study/h5-lab/01-landing` | rem + flex/grid、表单/弹层、懒加载 | **H5/移动向** |
+| 📱 加分 | **微信小程序 demo** | `Study/miniprogram-lab/demo-booking` | 列表→详情→提交、自定义组件 | **小程序向** |
+| 亮点 | 远程网管 / 地图可视化 | `04GUI\xiongy\RE_base` | Vue 3 + Vite + Pinia + **AntV L7** + i18n | **图表 / GIS** |
+| 补充 | 旧版网管维护 | `04GUI\30_WEB` | Vue 2 + Vuex + Element UI | 遗留维护 |
 
 **不再新建 `Study/vue-admin`**——用现有项目深挖 + 面试化。  
-**移动向：** 双 demo 放入后补评审与简历话术（见 `ROADMAP.md` 第 4B）。
+**全栈 12 日：** `ROADMAP.md` 第 4C · `fullstack-lab/`。H5/小程序让路，不抢每天主时间。
 
 ---
 
@@ -121,10 +122,13 @@ BUSINESS/
 - **模块**：产品 CRUD、新闻、方案、用户登录（按你实际负责写）
 - **和 40WEB 分工**：40WEB 偏设备网管复杂度；BUSINESS 偏 CMS + 全栈闭环
 
-### 待你填写
+### 待你填写（第 4C 作业）
 
 - 是否已上线：是 / 否
 - 你最熟的 2 个后台页：________、________
+- JWT 过滤器类名：________
+- 一张核心表名（脱敏）：________
+- 分层对照表：填 `fullstack-lab/notes-core.md` 第二节
 
 ---
 
@@ -138,13 +142,24 @@ BUSINESS/
 
 ## 简历项目描述模板（脱敏）
 
-### 项目一 · RT9800 设备 Web 网管（主）
+### 投全栈岗 · 项目一 · 公司官网与内容管理
+
+- 独立完成官网前台与管理后台（Vue3）及 Spring Boot 后端，JWT 鉴权与接口联调
+- 负责产品/新闻/方案等模块的库表与 CRUD，前端对接 REST
+- （补）Maven 打包 / Nginx 或 jar 部署按实际填写
+
+### 投全栈岗 · 项目二 · RT9800 设备 Web 网管
+
+- 负责 Vue 3 + Vite 设备管理前端，登录鉴权、配置、升级等模块
+- Pinia + Router 守卫，工程化（ESLint、多环境、mock）
+
+### 投纯前端岗 · 项目一 · RT9800 设备 Web 网管（主）
 
 - 负责 Vue 3 + Vite 设备管理前端，含登录鉴权、设备配置、升级等模块
 - 使用 Pinia 管理用户/权限状态，Router 守卫 + Token 刷新恢复
 - 配置 ESLint/Prettier、多环境构建，mock 数据支持并行开发
 
-### 项目二 · 公司官网与内容管理（副）
+### 投纯前端岗 · 项目二 · 公司官网与内容管理（副）
 
 - 独立完成官网前端（Vue3）与 Spring Boot 后端，JWT 鉴权
 - 实现产品/新闻/方案等内容管理与前台展示
@@ -153,10 +168,12 @@ BUSINESS/
 
 ## 面试自检清单
 
+- [ ] BUSINESS 能讲 **8 分钟**（分层图 + JWT + 1 个 CRUD + 跨域）
+- [ ] `fullstack-lab/sql-practice.md` 5 题写完
+- [ ] Maven / Linux 部署能口述
 - [ ] 40WEB 能讲满 **15 分钟**（背景→架构→鉴权→1 个业务模块→难点）
-- [ ] BUSINESS 能讲 **5–8 分钟**（全栈分工 + JWT 流程）
-- [ ] H5 demo 能讲 **3–5 分钟**（适配方案 + 兼容坑 + 一处优化）
-- [ ] 小程序 demo 能讲 **5–8 分钟**（页面流 + 组件 + setData/性能）
+- [ ] H5 demo 能讲 **3–5 分钟**（投移动岗时）
+- [ ] 小程序 demo 能讲 **5–8 分钟**（投移动岗时）
 - [ ] 每个技术点能指到**具体文件/函数**
 - [ ] `interview/project-40web-faq.md` 高频题过一遍
-- [ ] 简历已更新，30_WEB 不抢主项目戏份；移动向条目在双 demo 就绪后写入
+- [ ] 简历：全栈岗 BUSINESS 第一；年限不写成 3 年全栈
